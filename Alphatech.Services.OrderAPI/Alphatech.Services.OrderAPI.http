@@ -1,0 +1,6 @@
+@Alphatech.Services.OrderAPI_HostAddress = http://localhost:5007
+
+GET {{Alphatech.Services.OrderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

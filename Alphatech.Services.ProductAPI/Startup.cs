@@ -1,11 +1,15 @@
 ﻿using Alphatech.Services.ProductAPI.DBProductContext;
+using Alphatech.Services.ProductAPI.Models.Dto;
+using Alphatech.Services.ProductAPI.RabbitMQ;
 using Alphatech.Services.ProductAPI.Repository;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using NLog.Extensions.Logging;
+using RabbitMQ.Client;
 
 namespace Alphatech.Services.ProductAPI
 {
@@ -25,7 +29,22 @@ namespace Alphatech.Services.ProductAPI
          .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
          .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true, reloadOnChange: true);
 
+         
+
             Configuration = builder.Build();
+            services.Configure<RabbitMqSettings>(Configuration.GetSection("RabbitMq"));
+            services.AddTransient<ProductService>();
+            services.AddSingleton<IConnectionFactory>(sp =>
+            {
+                var rabbitMqSettings = sp.GetRequiredService<IOptions<RabbitMqSettings>>().Value;
+                return new ConnectionFactory()
+                {
+                    HostName = rabbitMqSettings.HostName,
+                    Port = rabbitMqSettings.Port,
+                    UserName = rabbitMqSettings.UserName,
+                    Password = rabbitMqSettings.Password
+                };
+            });
 
             services.AddSingleton<IConfiguration>(Configuration);
 

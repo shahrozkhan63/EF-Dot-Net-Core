@@ -289,3 +289,5 @@ D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\
 D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\Dapper.dll
+D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\obj\Debug\net8.0\Alphatech.Services.ProductAPI.sourcelink.json

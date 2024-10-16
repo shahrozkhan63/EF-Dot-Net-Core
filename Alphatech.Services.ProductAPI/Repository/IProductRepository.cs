@@ -8,6 +8,7 @@ namespace Alphatech.Services.ProductAPI.Repository
         Task<IEnumerable<object>> GetDynamicProducts();
         Task<ProductDto> GetProductById(int productId);
         Task<ProductDto> CreateUpdateProduct(ProductDto product);
+        Task<ProductDto> CreateProduct(ProductDto product);
         Task<bool> DeleteProduct(int productId);
         Task<int> TestConnectionAsync();
 

@@ -233,5 +233,9 @@ namespace Alphatech.Services.ProductAPI.Repository
             return results;
         }
 
+        public Task<ProductDto> CreateProduct(ProductDto product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

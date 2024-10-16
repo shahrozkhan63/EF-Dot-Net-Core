@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Alphatech.Services.ProductAPI.DBProductContext;
 using Alphatech.Services.ProductAPI.Models.Dto;
 using Alphatech.Services.ProductAPI.Repository;
+using Alphatech.Services.ProductAPI.RabbitMQ;
+using Alphatech.Services.ProductAPI.Models;
 
 namespace Alphatech.Services.ProductAPI.Controllers
 {
@@ -17,10 +19,12 @@ namespace Alphatech.Services.ProductAPI.Controllers
     {
         protected ResponseDto _response = new();
         private IProductRepository _iProductRepository;
+        private readonly ProductService _productService;
 
-        public ProductController(IProductRepository iProductRepository)
+        public ProductController(IProductRepository iProductRepository, ProductService productService)
         {
             _iProductRepository = iProductRepository;
+            _productService = productService;
         }
 
         [Route("GetProducts")]
@@ -80,15 +84,28 @@ namespace Alphatech.Services.ProductAPI.Controllers
         {
             try
             {
-                var returnModel = await _iProductRepository.CreateUpdateProduct(productDto);
-                _response.Result = returnModel;
+                if (productDto == null)
+                {
+                    return BadRequest("Product cannot be null");
+                }
+
+                //var returnModel = await _iProductRepository.CreateUpdateProduct(productDto);
+                //_response.Result = returnModel;
+
+
+                // Here you would typically save the product to a database
+                // For simplicity, we will just publish it to RabbitMQ
+
+                _productService.PublishProduct(productDto);
+
             }
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string> { ex.ToString() };
             }
-            return _response;
+            //  return _response;
+            return CreatedAtAction(nameof(CreateUpdateProduct), new { id = productDto.Id }, productDto);
         }
 
         [Route("DeleteProduct")]
