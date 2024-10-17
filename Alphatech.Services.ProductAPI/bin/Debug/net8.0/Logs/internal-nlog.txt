@@ -202,3 +202,87 @@
 2024-10-11 07:58:42.5314 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
 2024-10-11 07:58:42.5551 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
 2024-10-11 07:58:42.5700 Info Configuration initialized.
+2024-10-16 12:02:51.8108 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:02:51.8487 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:02:51.9357 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:02:51.9491 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:02:51.9491 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:02:51.9744 Info Configuration initialized.
+2024-10-16 12:10:56.8091 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:10:56.8394 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:10:56.8744 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:10:56.8886 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:10:56.9062 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:10:56.9229 Info Configuration initialized.
+2024-10-16 12:22:05.0094 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:22:05.0361 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:22:05.0709 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:22:05.0866 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:22:05.1001 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:22:05.1001 Info Configuration initialized.
+2024-10-16 12:39:33.4833 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:39:33.5309 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:39:33.5763 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:39:33.5908 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:39:33.6061 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:39:33.6209 Info Configuration initialized.
+2024-10-16 12:46:34.8331 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:46:34.8795 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:46:34.9246 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:46:34.9397 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:46:34.9554 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:46:34.9690 Info Configuration initialized.
+2024-10-16 12:53:03.2220 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 12:53:03.2605 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 12:53:03.3030 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 12:53:03.3146 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 12:53:03.3146 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 12:53:03.3394 Info Configuration initialized.
+2024-10-16 13:02:53.2473 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 13:02:53.2720 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 13:02:53.3057 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 13:02:53.3162 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 13:02:53.3258 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 13:02:53.3258 Info Configuration initialized.
+2024-10-16 13:06:16.6441 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 13:06:16.6824 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 13:06:16.7185 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 13:06:16.7185 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 13:06:16.7364 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 13:06:16.7364 Info Configuration initialized.
+2024-10-16 13:14:32.3535 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 13:14:32.3884 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 13:14:32.4343 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 13:14:32.4492 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 13:14:32.4663 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 13:14:32.4815 Info Configuration initialized.
+2024-10-16 13:20:37.7803 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 13:20:37.9810 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 13:20:38.0224 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 13:20:38.0331 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 13:20:38.0625 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 13:20:38.0734 Info Configuration initialized.
+2024-10-16 13:26:50.7260 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 13:26:50.8856 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 13:26:50.9348 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 13:26:50.9348 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 13:26:50.9659 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 13:26:50.9659 Info Configuration initialized.
+2024-10-16 14:57:51.9035 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 14:57:51.9346 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 14:57:51.9699 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 14:57:51.9825 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 14:57:51.9960 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 14:57:51.9960 Info Configuration initialized.
+2024-10-16 15:02:40.3731 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 15:02:40.4068 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 15:02:40.4551 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 15:02:40.4551 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 15:02:40.4780 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 15:02:40.4896 Info Configuration initialized.
+2024-10-16 15:26:57.8797 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-16 15:26:57.9111 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-16 15:26:57.9444 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-16 15:26:57.9546 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-16 15:26:57.9714 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-16 15:26:57.9837 Info Configuration initialized.

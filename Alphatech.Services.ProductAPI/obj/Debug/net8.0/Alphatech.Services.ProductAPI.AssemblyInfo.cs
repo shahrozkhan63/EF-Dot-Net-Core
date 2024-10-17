@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Alphatech.Services.ProductAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+658263c37d0261933f53645ae7d33e0c14c55d8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2db1e8f6aa60839c94796c49a3ded3c7877c18e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Alphatech.Services.ProductAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Alphatech.Services.ProductAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
