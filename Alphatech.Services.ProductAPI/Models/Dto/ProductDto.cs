@@ -5,7 +5,7 @@ namespace Alphatech.Services.ProductAPI.Models.Dto
     public class ProductDto
     {
         [Key]
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         [Required]
         public string Name { get; set; }
 

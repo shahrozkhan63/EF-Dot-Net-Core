@@ -328,3 +328,15 @@
 2024-10-21 15:14:19.5292 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
 2024-10-21 15:14:19.5292 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
 2024-10-21 15:14:19.5558 Info Configuration initialized.
+2024-10-21 23:17:41.9444 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-21 23:17:42.4107 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-21 23:17:42.4925 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-21 23:17:42.4925 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-21 23:17:42.5231 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-21 23:17:42.5464 Info Configuration initialized.
+2024-10-21 23:24:10.6454 Info Loading assembly name: NLog.Web.AspNetCore
+2024-10-21 23:24:10.6902 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.13.1144. Product version: 5.3.13+628b0876960af3ee3454c99b7985dbb5e1c46bf0. GlobalAssemblyCache: False
+2024-10-21 23:24:10.7740 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-10-21 23:24:10.7874 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-10-21 23:24:10.8100 Info Validating config: TargetNames=allfile, ConfigItems=14, FilePath=D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.ProductAPI\bin\Debug\net8.0\NLog.config
+2024-10-21 23:24:10.8312 Info Configuration initialized.

@@ -110,7 +110,7 @@ namespace Alphatech.Services.OrderAPI.OrderServices
                 // Create an order item
                 OrderItem orderItem = new()
                 {
-                    ProductId = product.Id,
+                    ProductId = product.ProductId,
                     ProductName = product.Name,
                     ProductPrice = product.Price,
                     Quantity = rng.Next(1, 100)  // Example quantity between 1 and 100
@@ -133,10 +133,10 @@ namespace Alphatech.Services.OrderAPI.OrderServices
 
             // Log and output the product details for confirmation
          
-            _logger.LogInformation($"Received Product: Id={product.Id}, Name={product.Name}, Price={product.Price}, " +
+            _logger.LogInformation($"Received Product: Id={product.ProductId}, Name={product.Name}, Price={product.Price}, " +
                              $"Description={product.Description}, Category={product.CategoryName}, ImageURL={product.ImageURL}");
 
-            Console.WriteLine($"Received Product: Id={product.Id}, Name={product.Name}, Price={product.Price}, " +
+            Console.WriteLine($"Received Product: Id={product.ProductId}, Name={product.Name}, Price={product.Price}, " +
                              $"Description={product.Description}, Category={product.CategoryName}, ImageURL={product.ImageURL}");
         }
 
@@ -147,10 +147,10 @@ namespace Alphatech.Services.OrderAPI.OrderServices
             var product = JsonSerializer.Deserialize<ProductDto>(message);
 
             _logger.LogInformation($"Processing 'order_canceled' message: {message}");
-            _logger.LogInformation($"Received Product: Id={product.Id}, Name={product.Name}, Price={product.Price}, " +
+            _logger.LogInformation($"Received Product: Id={product.ProductId}, Name={product.Name}, Price={product.Price}, " +
                             $"Description={product.Description}, Category={product.CategoryName}, ImageURL={product.ImageURL}");
 
-            Console.WriteLine($"Received Product: Id={product.Id}, Name={product.Name}, Price={product.Price}, " +
+            Console.WriteLine($"Received Product: Id={product.ProductId}, Name={product.Name}, Price={product.Price}, " +
                            $"Description={product.Description}, Category={product.CategoryName}, ImageURL={product.ImageURL}");
         }
 

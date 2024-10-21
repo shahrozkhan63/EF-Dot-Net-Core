@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "CreateUpdateProduct",
+    "RelativePath": "api/Product/CreateUpdateProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productDto",
+        "Type": "Alphatech.Services.ProductAPI.Models.Dto.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Product/DeleteProduct",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "GetDynamicProducts",
+    "RelativePath": "api/Product/GetDynamicProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "GetProductById",
+    "RelativePath": "api/Product/GetProductById/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Product/GetProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Alphatech.Services.ProductAPI.Controllers.ProductController",
+    "Method": "TestConnection",
+    "RelativePath": "api/Product/TestConnection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

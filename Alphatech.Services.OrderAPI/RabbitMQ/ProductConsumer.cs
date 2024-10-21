@@ -44,7 +44,7 @@ namespace Alphatech.Services.OrderAPI.RabbitMQ
                     if (product != null) // Ensure the product is not null
                     {
                         // Log the received product information to NLog
-                        _logger.LogInformation($"Received Product: Id={product.Id}, Name={product.Name}, Price={product.Price}, " +
+                        _logger.LogInformation($"Received Product: Id={product.ProductId}, Name={product.Name}, Price={product.Price}, " +
                                     $"Description={product.Description}, Category={product.CategoryName}, ImageURL={product.ImageURL}");
                     }
 

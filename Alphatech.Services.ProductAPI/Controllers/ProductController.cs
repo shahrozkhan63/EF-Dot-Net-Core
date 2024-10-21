@@ -104,7 +104,7 @@ namespace Alphatech.Services.ProductAPI.Controllers
                 _response.ErrorMessages = new List<string> { ex.ToString() };
             }
             //  return _response;
-            return CreatedAtAction(nameof(CreateUpdateProduct), new { id = productDto.Id }, productDto);
+            return CreatedAtAction(nameof(CreateUpdateProduct), new { id = productDto.ProductId }, productDto);
         }
 
         [Route("DeleteProduct")]

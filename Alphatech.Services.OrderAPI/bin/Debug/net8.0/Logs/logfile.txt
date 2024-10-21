@@ -469,3 +469,299 @@ VALUES (@p3, @p4, @p5, @p6, @p7);
 2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to the database.
 2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":93,"Name":"Wood Product","Price":299.0,"Description":"Ensure OrderId is the primary key with identity (auto-increment).","CategoryName":"Establish a foreign key","ImageURL":"www.producOrderItem t.com"}
 2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=93, Name=Wood Product, Price=299.0, Description=Ensure OrderId is the primary key with identity (auto-increment)., Category=Establish a foreign key, ImageURL=www.producOrderItem t.com
+2024-10-21 23:16:07.5943|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 23:16:09.2003|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 23:16:09.2127|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 23:16:09.5473|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 23:16:09.5473|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 23:16:09.5473|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-21 23:16:12.6411|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger - - -
+2024-10-21 23:16:13.6332|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger - 301 0 - 1036.4957ms
+2024-10-21 23:16:13.8060|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 23:16:14.2606|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 455.1652ms
+2024-10-21 23:16:14.7022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - - -
+2024-10-21 23:16:14.7022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.css - - -
+2024-10-21 23:16:14.7022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui-bundle.js - - -
+2024-10-21 23:16:14.7075|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui-standalone-preset.js - - -
+2024-10-21 23:16:14.7224|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 23:16:14.7639|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 23:16:14.7639|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 23:16:14.8341|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 117.5515ms
+2024-10-21 23:16:14.8983|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 133.9818ms
+2024-10-21 23:16:14.9202|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-10-21 23:16:14.9202|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.css - 200 202 text/css 218.9799ms
+2024-10-21 23:16:14.9759|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-10-21 23:16:14.9759|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-10-21 23:16:14.9759|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - 200 152034 text/css 284.3246ms
+2024-10-21 23:16:14.9759|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 277.8290ms
+2024-10-21 23:16:15.0582|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-10-21 23:16:15.0582|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 354.3380ms
+2024-10-21 23:16:20.0960|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 5332.2867ms
+2024-10-21 23:16:20.3053|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 23:16:20.3993|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/favicon-32x32.png - - -
+2024-10-21 23:16:20.3993|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-10-21 23:16:20.3993|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/favicon-32x32.png - 200 628 image/png 3.1589ms
+2024-10-21 23:16:20.6285|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 324.7578ms
+2024-10-21 23:16:45.6773|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-21 23:16:45.8056|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 23:16:45.8597|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-21 23:16:53.2255|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'OrderServiceDB' on server 'localhost'.
+2024-10-21 23:16:53.3263|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "OrderServiceDB" requested by the login. The login failed.
+Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:87b65bb1-a95e-441e-846f-b282b3dbb2b6
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2024-10-21 23:16:53.5833|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-21 23:16:53.6526|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 7778.2709ms
+2024-10-21 23:16:53.6526|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 23:16:53.6760|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 8000.2013ms
+2024-10-21 23:18:38.6016|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":99,"Name":"Test Sample Product","Price":1000.0,"Description":"Test Description","CategoryName":"test categoryName","ImageURL":"www.prdouct.com"}
+2024-10-21 23:18:39.2897|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'OrderServiceDB' on server 'localhost'.
+2024-10-21 23:18:39.3235|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "OrderServiceDB" requested by the login. The login failed.
+Login failed for user 'sa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:cabced91-6175-4ca8-85af-95cc4da62751
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 23:18:39.4831|ERROR|Alphatech.Services.OrderAPI.Repository.OrderRepository|An error occurred while creating the order.
+2024-10-21 23:23:43.4726|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 23:23:44.4320|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 23:23:44.4438|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 23:23:44.9983|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 23:23:45.0152|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 23:23:45.0152|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-21 23:23:46.3168|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 23:23:46.7980|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 509.5342ms
+2024-10-21 23:23:46.9476|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 23:23:46.9476|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 23:23:46.9476|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 23:23:46.9476|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 9.8311ms
+2024-10-21 23:23:47.0100|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 63.6415ms
+2024-10-21 23:23:47.0841|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 138.1068ms
+2024-10-21 23:23:47.6405|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 23:23:47.9830|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 343.0975ms
+2024-10-21 23:25:12.6356|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":99,"Name":"Test Sample Product","Price":1000.0,"Description":"test description","CategoryName":"test categoryName","ImageURL":"www.product.com/"}
+2024-10-21 23:25:16.7486|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (549ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 23:25:16.8946|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (29ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+OUTPUT INSERTED.[OrderItemId]
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 23:25:16.9551|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to the database.
+2024-10-21 23:25:16.9678|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=0, Name=Test Sample Product, Price=1000.0, Description=test description, Category=test categoryName, ImageURL=www.product.com/
+2024-10-21 23:35:47.9348|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 23:35:48.8851|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 23:35:48.8965|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 23:35:49.1639|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 23:35:49.1789|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 23:35:49.1789|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-21 23:35:51.0291|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 23:35:51.5730|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 581.0409ms
+2024-10-21 23:35:51.7598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 23:35:51.7598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 23:35:51.7598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 23:35:51.7598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 6.5348ms
+2024-10-21 23:35:51.8300|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 70.3880ms
+2024-10-21 23:35:51.9359|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 175.1378ms
+2024-10-21 23:35:52.1504|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 23:35:52.4995|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 349.6650ms
+2024-10-21 23:36:07.2337|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-21 23:36:07.2980|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 23:36:07.3533|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-21 23:36:10.9668|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (166ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+2024-10-21 23:36:11.2320|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-21 23:36:11.3189|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 3952.7125ms
+2024-10-21 23:36:11.3189|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 23:36:11.3374|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 4104.9108ms
+2024-10-21 23:50:13.9191|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 23:50:14.7160|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 23:50:14.7277|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 23:50:14.9890|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 23:50:14.9890|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 23:50:14.9890|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-21 23:50:16.3327|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 23:50:16.6984|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 388.1034ms
+2024-10-21 23:50:16.8574|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 23:50:16.8574|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 23:50:16.8574|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 6.5016ms
+2024-10-21 23:50:16.8740|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 23:50:16.8830|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 25.1701ms
+2024-10-21 23:50:16.9695|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 96.2557ms
+2024-10-21 23:50:17.1424|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 23:50:17.4942|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 352.1570ms
+2024-10-21 23:50:31.3036|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 PUT https://localhost:7131/api/Order/GetOrderById/1 - - 0
+2024-10-21 23:50:31.4056|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-21 23:50:31.4693|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-21 23:50:35.0882|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (172ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+WHERE [o].[OrderId] = @__orderId_0
+2024-10-21 23:50:35.3468|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-21 23:50:35.4076|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 3925.432ms
+2024-10-21 23:50:35.4076|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-21 23:50:35.4260|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 PUT https://localhost:7131/api/Order/GetOrderById/1 - 200 - application/json;+charset=utf-8 4122.9609ms
+2024-10-21 23:55:49.6260|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 23:55:50.6106|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 23:55:50.6214|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 23:55:50.8925|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 23:55:50.8954|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 23:55:50.8954|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-21 23:55:53.1945|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 23:55:53.6425|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 480.9072ms
+2024-10-21 23:55:53.9470|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 23:55:53.9470|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 23:55:53.9470|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 7.0900ms
+2024-10-21 23:55:53.9708|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 24.6132ms
+2024-10-21 23:55:54.0844|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 23:55:54.2282|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 144.4490ms
+2024-10-21 23:55:54.4421|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 23:55:54.7370|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 296.1209ms
+2024-10-22 00:05:51.5072|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-22 00:05:52.4808|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-22 00:05:52.4920|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-22 00:05:52.9152|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-22 00:05:53.1105|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-22 00:05:53.1105|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-22 00:05:54.0810|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-22 00:05:54.5354|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 488.3181ms
+2024-10-22 00:05:54.8494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-22 00:05:54.8494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-22 00:05:54.8494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 8.1636ms
+2024-10-22 00:05:54.8631|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-22 00:05:54.8631|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 28.8760ms
+2024-10-22 00:05:55.0039|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 142.0165ms
+2024-10-22 00:05:55.2495|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-22 00:05:55.5817|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 332.7526ms
+2024-10-22 00:07:15.9326|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/order/orders/1 - - -
+2024-10-22 00:07:16.0435|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/order/orders/1 - 404 0 - 112.0583ms
+2024-10-22 00:07:16.0435|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7131/api/order/orders/1, Response status code: 404
+2024-10-22 00:07:36.0440|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 PUT https://localhost:7131/api/Order/GetOrderById/1 - - 0
+2024-10-22 00:07:36.0923|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-22 00:07:36.1620|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-22 00:07:50.0393|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (223ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+WHERE [o].[OrderId] = @__orderId_0
+2024-10-22 00:07:50.5740|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-22 00:07:50.6665|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 14490.6406ms
+2024-10-22 00:07:50.6665|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-22 00:07:50.6850|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 PUT https://localhost:7131/api/Order/GetOrderById/1 - 200 - application/json;+charset=utf-8 14641.4241ms
+2024-10-22 00:08:00.0368|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrderById/1 - - -
+2024-10-22 00:08:00.0705|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint '405 HTTP Method Not Supported'
+2024-10-22 00:08:00.0705|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint '405 HTTP Method Not Supported'
+2024-10-22 00:08:00.0705|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrderById/1 - 405 0 - 38.0259ms
+2024-10-22 00:08:06.1598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrderById/1 - - -
+2024-10-22 00:08:06.1598|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint '405 HTTP Method Not Supported'
+2024-10-22 00:08:06.1598|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint '405 HTTP Method Not Supported'
+2024-10-22 00:08:06.1598|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrderById/1 - 405 0 - 10.7577ms
+2024-10-22 00:08:18.4488|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-22 00:08:18.4488|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:08:18.4630|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-22 00:08:21.5906|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+2024-10-22 00:08:21.6167|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-22 00:08:21.6167|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 3162.9563ms
+2024-10-22 00:08:21.6167|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:08:21.6167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 3179.0779ms
+2024-10-22 00:08:31.1234|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-22 00:08:31.1321|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:08:31.1321|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-22 00:08:31.3094|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+2024-10-22 00:08:31.3165|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-22 00:08:31.3165|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 184.3637ms
+2024-10-22 00:08:31.3165|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:08:31.3165|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 194.9806ms
+2024-10-22 00:14:46.2781|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-22 00:14:46.9639|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-22 00:14:46.9639|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-22 00:14:47.2198|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-22 00:14:47.2198|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-22 00:14:47.2198|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Programming\Projects\EF Dot Net Core Alpha - Microservices\Alphatech.Services.OrderAPI
+2024-10-22 00:14:48.5714|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-22 00:14:48.9841|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 446.1075ms
+2024-10-22 00:14:49.2318|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-22 00:14:49.2318|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 5.3259ms
+2024-10-22 00:14:49.2468|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-22 00:14:49.2468|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-22 00:14:49.2919|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 46.0429ms
+2024-10-22 00:14:49.3652|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 113.0699ms
+2024-10-22 00:14:49.6726|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-22 00:14:49.9204|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 248.5222ms
+2024-10-22 00:15:54.6683|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-22 00:15:54.8282|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:15:54.8908|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-22 00:15:59.1485|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (89ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+2024-10-22 00:15:59.4443|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-22 00:15:59.5159|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 4610.795ms
+2024-10-22 00:15:59.5159|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-22 00:15:59.5404|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 4873.2971ms
