@@ -1,4 +1,4 @@
-﻿using Alphatech.Services.ProductAPI.DBProductContext;
+﻿using Alphatech.Services.ProductAPI.Models;
 using Alphatech.Services.ProductAPI.Models.Dto;
 using Alphatech.Services.ProductAPI.RabbitMQ;
 using Alphatech.Services.ProductAPI.Repository;
@@ -33,7 +33,7 @@ namespace Alphatech.Services.ProductAPI
 
             Configuration = builder.Build();
             services.Configure<RabbitMqSettings>(Configuration.GetSection("RabbitMq"));
-            services.AddTransient<ProductService>();
+            services.AddTransient<ProductOrderPublisherService>();
             services.AddSingleton<IConnectionFactory>(sp =>
             {
                 var rabbitMqSettings = sp.GetRequiredService<IOptions<RabbitMqSettings>>().Value;

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Alphatech.Services.ProductAPI.DBProductContext;
 using Alphatech.Services.ProductAPI.Models.Dto;
 using Alphatech.Services.ProductAPI.Repository;
 using Alphatech.Services.ProductAPI.RabbitMQ;
@@ -19,9 +18,9 @@ namespace Alphatech.Services.ProductAPI.Controllers
     {
         protected ResponseDto _response = new();
         private IProductRepository _iProductRepository;
-        private readonly ProductService _productService;
+        private readonly ProductOrderPublisherService _productService;
 
-        public ProductController(IProductRepository iProductRepository, ProductService productService)
+        public ProductController(IProductRepository iProductRepository, ProductOrderPublisherService productService)
         {
             _iProductRepository = iProductRepository;
             _productService = productService;

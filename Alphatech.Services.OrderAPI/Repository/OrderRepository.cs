@@ -1,7 +1,7 @@
-﻿using Alphatech.Services.OrderAPI.DBOrderContext;
-using Alphatech.Services.OrderAPI.Helper;
+﻿using Alphatech.Services.OrderAPI.Helper;
 using Alphatech.Services.OrderAPI.Models;
 using Alphatech.Services.OrderAPI.Models.Dto;
+using Alphatech.Services.OrderAPI.OrderServices;
 using AutoMapper;
 using Dapper;
 using Microsoft.CodeAnalysis;
@@ -15,23 +15,23 @@ namespace Alphatech.Services.OrderAPI.Repository
     public class OrderRepository : IOrderRepository
     {
         private readonly ApplicationDbContext _db;
+        private readonly ILogger<OrderRepository> _logger;
         private IMapper _mapper;
         private readonly DatabaseHelper _databaseHelper;
         private readonly DynamicClassGenerator _classGenerator;
-        public OrderRepository(ApplicationDbContext db, IMapper mapper)
+        public OrderRepository(ApplicationDbContext db, IMapper mapper,ILogger<OrderRepository> logger)
         {
             _db = db;
             _mapper = mapper;
             _databaseHelper = new DatabaseHelper(db);
             _classGenerator = new DynamicClassGenerator();
+            _logger = logger;
         }
 
-        public async Task<OrderDto> CreateUpdateOrder(OrderDto orderdto)
+        public async Task<Order> CreateUpdateOrder(Order order)
         {
-            OrderDto returnDto = new();
             try
             {
-                Order order = _mapper.Map<OrderDto, Order>(orderdto);
                 if (order == null)
                 {
                     order = new Order();
@@ -39,26 +39,22 @@ namespace Alphatech.Services.OrderAPI.Repository
 
                 if (order.OrderId > 0)
                 {
-                  
                     _db.Update<Order>(order);
-                    
                 }
                 else
                 {
                     _db.Orders.Add(order);
                 }
 
-                var domain = await _db.Orders.Where(x => x.OrderId == order.OrderId).FirstOrDefaultAsync();
+                //var domain = await _db.Orders.Where(x => x.OrderId == order.OrderId).FirstOrDefaultAsync();
                 await _db.SaveChangesAsync();
-                var domain2 = await _db.Orders.Where(x => x.OrderId == order.OrderId).FirstOrDefaultAsync();
 
-                returnDto = _mapper.Map<Order, OrderDto>(order);
             }
             catch (Exception ex)
             {
 
             }
-            return returnDto;
+            return order;
         }
 
         public async Task<bool> DeleteOrder(int orderId)
@@ -233,9 +229,60 @@ namespace Alphatech.Services.OrderAPI.Repository
             return results;
         }
 
-        public Task<OrderDto> CreateOrder(OrderDto order)
+        public async Task<int> CreateOrder(Order order)
         {
-            throw new NotImplementedException();
+            int retVal = 0;
+            try
+            {
+                // Add the order to the database context
+                _db.Orders.Add(order);
+
+                // Save the changes and get the number of affected rows
+                retVal = await _db.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use your logging mechanism here)
+                _logger.LogError(ex, "An error occurred while creating the order.");
+
+                // Optionally, rethrow the exception if you want the caller to handle it
+                throw;
+            }
+
+            // Return the result (number of affected rows)
+            return retVal;
+        }
+
+
+        public async Task<int> CreateOrderItem(OrderItem orderItem)
+        {
+            int retVal = 0;
+            try
+            {
+                if (orderItem == null)
+                {
+                    orderItem = new OrderItem();
+                }
+
+                if (orderItem.OrderId > 0)
+                {
+
+                    _db.Update<OrderItem>(orderItem);
+
+                }
+                else
+                {
+                    _db.OrderItems.Add(orderItem);
+                }
+
+                var domain = await _db.OrderItems.Where(x => x.OrderId == orderItem.OrderId).FirstOrDefaultAsync();
+                retVal=  await _db.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return retVal;
         }
     }
 }

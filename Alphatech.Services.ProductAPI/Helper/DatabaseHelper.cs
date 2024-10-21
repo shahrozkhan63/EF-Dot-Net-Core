@@ -1,11 +1,11 @@
-﻿using Alphatech.Services.OrderAPI.Helper;
+﻿using Alphatech.Services.ProductAPI.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using System.Data.Common;
 
-namespace Alphatech.Services.OrderAPI.DBOrderContext
+namespace Alphatech.Services.ProductAPI.Helper
 {
     public class DatabaseHelper
     {
@@ -17,7 +17,7 @@ namespace Alphatech.Services.OrderAPI.DBOrderContext
             _context = context;
             _classGenerator = new DynamicClassGenerator();
         }
-      
+
         public async Task<List<object>> GenerateDTOFromStoredProcedureAsync(
      string storedProcedureName,
      string className,
@@ -101,8 +101,8 @@ namespace Alphatech.Services.OrderAPI.DBOrderContext
                 }
             }
         }
-        
-      
+
+
 
 
         private async Task<List<Dictionary<string, object>>> ExecuteDynamicStoredProcedureAsync(string storedProcedureName, CancellationToken cancellationToken, params SqlParameter[] parameters)
@@ -111,7 +111,7 @@ namespace Alphatech.Services.OrderAPI.DBOrderContext
 
             using (DbConnection connection = _context.Database.GetDbConnection())
             {
-                if (connection.State != System.Data.ConnectionState.Open)
+                if (connection.State != ConnectionState.Open)
                 {
                     await connection.OpenAsync(cancellationToken);
                 }

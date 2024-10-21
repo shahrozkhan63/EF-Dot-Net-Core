@@ -1,19 +1,21 @@
-﻿using Alphatech.Services.OrderAPI.Models;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Alphatech.Services.OrderAPI.Models
+namespace Alphatech.Services.OrderAPI.Models;
+
+public partial class OrderItem
 {
-    public class OrderItem
-    {
-        public int OrderId { get; set; }
+    public int OrderItemId { get; set; }
 
+    public int OrderId { get; set; }
 
-        public int ProductId { get; set; }  // No direct reference to Product entity
+    public int ProductId { get; set; }
 
-        public int Quantity { get; set; }
+    public int Quantity { get; set; }
 
-        // Optionally, store some additional product details
-        public string ProductName { get; set; }    // Cached product name
-        public decimal ProductPrice { get; set; }  // Cached product price
-        public Order Order { get; set; }
-    }
+    public string? ProductName { get; set; }
+
+    public decimal? ProductPrice { get; set; }
+
+    public virtual Order Order { get; set; } = null!;
 }

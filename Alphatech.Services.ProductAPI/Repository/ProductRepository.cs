@@ -1,5 +1,4 @@
-﻿using Alphatech.Services.ProductAPI.DBProductContext;
-using Alphatech.Services.ProductAPI.Helper;
+﻿using Alphatech.Services.ProductAPI.Helper;
 using Alphatech.Services.ProductAPI.Models;
 using Alphatech.Services.ProductAPI.Models.Dto;
 using AutoMapper;
@@ -37,7 +36,7 @@ namespace Alphatech.Services.ProductAPI.Repository
                     product = new Product();
                 }
 
-                if (product.Id > 0)
+                if (product.ProductId > 0)
                 {
                   
                     _db.Update<Product>(product);
@@ -48,9 +47,9 @@ namespace Alphatech.Services.ProductAPI.Repository
                     _db.Products.Add(product);
                 }
 
-                var domain = await _db.Products.Where(x => x.Id == product.Id).FirstOrDefaultAsync();
+                var domain = await _db.Products.Where(x => x.ProductId == product.ProductId).FirstOrDefaultAsync();
                 await _db.SaveChangesAsync();
-                var domain2 = await _db.Products.Where(x => x.Id == product.Id).FirstOrDefaultAsync();
+                var domain2 = await _db.Products.Where(x => x.ProductId == product.ProductId).FirstOrDefaultAsync();
 
                 returnDto = _mapper.Map<Product, ProductDto>(product);
             }
@@ -61,11 +60,11 @@ namespace Alphatech.Services.ProductAPI.Repository
             return returnDto;
         }
 
-        public async Task<bool> DeleteProduct(int productId)
+        public async Task<bool> DeleteProduct(int productProductId)
         {
             try
             {
-                var product = await _db.Products.FirstOrDefaultAsync(x => x.Id == productId);
+                var product = await _db.Products.FirstOrDefaultAsync(x => x.ProductId == productProductId);
 
                 if (product == null)
                 {
@@ -81,12 +80,12 @@ namespace Alphatech.Services.ProductAPI.Repository
             }
         }
 
-        public async Task<ProductDto> GetProductById(int productId)
+        public async Task<ProductDto> GetProductById(int productProductId)
         {
             ProductDto productsDto = new();
             try
             {
-                var domain = await _db.Products.Where(x => x.Id == productId).FirstOrDefaultAsync();
+                var domain = await _db.Products.Where(x => x.ProductId == productProductId).FirstOrDefaultAsync();
                 productsDto = _mapper.Map<ProductDto>(domain);
             }
             catch (Exception ex)
@@ -118,7 +117,7 @@ namespace Alphatech.Services.ProductAPI.Repository
                 // SQL parameters for the stored procedure
                 var parameters = new[]
                 {
-            new SqlParameter("@ProductId", SqlDbType.Int) { Value = -1 }
+            new SqlParameter("@ProductProductId", SqlDbType.Int) { Value = -1 }
                 };
 
                         // Create a cancellation token

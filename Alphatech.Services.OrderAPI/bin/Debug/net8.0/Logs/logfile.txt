@@ -66,3 +66,406 @@
 2024-10-16 15:27:23.4301|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Received message: {"Id":80,"Name":"Sample Product","Price":99.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
 2024-10-16 15:27:25.4845|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Processing message: {"Id":80,"Name":"Sample Product","Price":99.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
 2024-10-16 15:27:27.3507|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Received Product: Id=80, Name=Sample Product, Price=99.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 09:13:15.2233|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange' with routing key 'product'.
+2024-10-21 09:14:07.2129|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 09:14:07.2248|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 09:14:07.2248|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 09:14:07.2248|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 09:14:07.2248|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 09:14:12.2278|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 09:14:14.7080|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2501.4605ms
+2024-10-21 09:14:14.8851|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 09:14:14.8851|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 09:14:14.8892|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.1404ms
+2024-10-21 09:14:14.8892|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 15.9534ms
+2024-10-21 09:14:15.7589|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 09:14:15.9050|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 146.2578ms
+2024-10-21 09:14:16.7161|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 09:14:16.9315|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 215.7076ms
+2024-10-21 09:16:08.2693|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Received message: {"Id":90,"Name":"Sample Product","Price":99.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 09:16:19.1234|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Processing message: {"Id":90,"Name":"Sample Product","Price":99.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 09:16:19.7018|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Received Product: Id=90, Name=Sample Product, Price=99.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 10:59:41.0780|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 10:59:44.6695|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 10:59:44.6695|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 10:59:44.6695|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 10:59:44.6695|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 10:59:44.6695|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 10:59:49.5328|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 10:59:51.9317|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2411.9778ms
+2024-10-21 10:59:52.5527|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 10:59:52.5527|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 2.3675ms
+2024-10-21 10:59:52.5868|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 10:59:52.5868|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 10:59:52.6349|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13790 application/javascript;+charset=utf-8 48.5015ms
+2024-10-21 10:59:52.7121|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 125.8028ms
+2024-10-21 10:59:53.3001|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 10:59:53.4208|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 121.0221ms
+2024-10-21 13:29:24.6207|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 13:29:26.3117|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 13:29:26.3184|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 13:29:26.3184|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 13:29:26.3184|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 13:29:26.3184|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 13:29:31.1368|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 13:29:33.5723|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2452.9794ms
+2024-10-21 13:29:35.1374|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 13:29:35.1374|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.3395ms
+2024-10-21 13:29:35.1659|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 13:29:35.1659|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 13:29:35.1930|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 27.1169ms
+2024-10-21 13:29:35.3026|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 135.3323ms
+2024-10-21 13:29:35.9571|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 13:29:36.0857|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 128.8189ms
+2024-10-21 13:33:41.5163|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Processing 'order_created' message: {"Id":92,"Name":"Sample Product","Price":150.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 13:33:42.3989|INFO|Alphatech.Services.OrderAPI.RabbitMQ.RabbitMQConsumerService|Received Product: Id=92, Name=Sample Product, Price=150.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 13:36:31.0453|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-21 13:36:31.4870|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 13:36:31.5873|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-21 13:36:33.4161|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 1822.0624ms
+2024-10-21 13:36:33.4702|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-21 13:36:33.5325|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2024-10-21 13:36:33.7331|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/GetOrders - 500 - text/plain;+charset=utf-8 2697.8202ms
+2024-10-21 13:36:45.3689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/api/Order/TestConnection - - -
+2024-10-21 13:36:45.3689|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.TestConnection (Alphatech.Services.OrderAPI)'
+2024-10-21 13:36:45.3689|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "TestConnection", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] TestConnection() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-21 13:36:45.4734|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.TestConnection (Alphatech.Services.OrderAPI) in 94.4457ms
+2024-10-21 13:36:45.5176|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.TestConnection (Alphatech.Services.OrderAPI)'
+2024-10-21 13:36:45.5800|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2024-10-21 13:36:45.5921|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/api/Order/TestConnection - 500 - text/plain;+charset=utf-8 223.1412ms
+2024-10-21 14:24:41.4299|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 14:24:42.0902|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 14:24:42.0902|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 14:24:42.0902|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 14:24:42.0902|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 14:24:42.0902|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 14:24:45.5791|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 14:24:48.8591|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3283.5947ms
+2024-10-21 14:24:50.9465|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.css - - -
+2024-10-21 14:24:50.9465|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 14:24:50.9465|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 14:24:50.9465|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - - -
+2024-10-21 14:24:50.9558|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 8.9613ms
+2024-10-21 14:24:50.9558|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui-bundle.js - - -
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /index.css was not modified
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui-bundle.js was not modified
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.css - 304 - text/css 23.6507ms
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui.css was not modified
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - 304 - text/css 33.8365ms
+2024-10-21 14:24:50.9681|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui-bundle.js - 304 - text/javascript 23.8847ms
+2024-10-21 14:24:50.9854|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui-standalone-preset.js - - -
+2024-10-21 14:24:50.9854|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 43.6935ms
+2024-10-21 14:24:51.0181|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /swagger-ui-standalone-preset.js was not modified
+2024-10-21 14:24:51.0181|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui-standalone-preset.js - 304 - text/javascript 32.9436ms
+2024-10-21 14:24:52.0053|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 14:24:52.1238|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 118.1628ms
+2024-10-21 14:24:52.5076|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/favicon-32x32.png - - -
+2024-10-21 14:24:52.5076|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /favicon-32x32.png was not modified
+2024-10-21 14:24:52.5076|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/favicon-32x32.png - 304 - image/png 0.9499ms
+2024-10-21 14:24:52.9706|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 14:24:53.1688|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 198.1296ms
+2024-10-21 14:26:47.6504|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (141ms) [Parameters=[@__orderItem_OrderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ProductId], [o].[ProductName], [o].[ProductPrice], [o].[Quantity]
+FROM [OrderItem] AS [o]
+WHERE [o].[OrderId] = @__orderItem_OrderId_0
+2024-10-21 14:26:48.9806|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+System.InvalidOperationException: The value of 'OrderItem.OrderId' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:27:06.2014|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to database.
+2024-10-21 14:27:06.2014|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":92,"Name":"Sample Product","Price":150.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 14:27:06.2014|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=92, Name=Sample Product, Price=150.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 14:28:02.2768|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[@__orderItem_OrderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ProductId], [o].[ProductName], [o].[ProductPrice], [o].[Quantity]
+FROM [OrderItem] AS [o]
+WHERE [o].[OrderId] = @__orderItem_OrderId_0
+2024-10-21 14:28:03.4355|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+System.InvalidOperationException: The value of 'OrderItem.OrderId' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:28:23.5460|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to database.
+2024-10-21 14:28:23.5833|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":92,"Name":"Sample Product","Price":150.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 14:28:23.5833|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=92, Name=Sample Product, Price=150.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 14:45:17.4931|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 14:45:18.4151|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 14:45:18.4151|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 14:45:18.4151|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 14:45:18.4151|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 14:45:18.4151|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 14:45:20.5962|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 14:45:23.5713|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2984.8523ms
+2024-10-21 14:45:23.9391|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 14:45:23.9391|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 14:45:23.9421|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.3337ms
+2024-10-21 14:45:23.9574|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 18.6024ms
+2024-10-21 14:45:24.9045|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 14:45:25.1115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 207.4225ms
+2024-10-21 14:45:29.9683|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 14:45:31.2129|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 1246.3899ms
+2024-10-21 14:47:02.0404|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (398ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 14:47:02.5427|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:47:43.9703|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (72ms) [Parameters=[@__orderItem_OrderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ProductId], [o].[ProductName], [o].[ProductPrice], [o].[Quantity]
+FROM [OrderItem] AS [o]
+WHERE [o].[OrderId] = @__orderItem_OrderId_0
+2024-10-21 14:47:45.9790|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (352ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 14:47:46.2991|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:51:53.7082|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 14:51:55.4860|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 14:51:55.4860|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 14:51:55.4860|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 14:51:55.4860|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 14:51:55.4860|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 14:51:58.0486|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 14:52:00.3961|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2357.7913ms
+2024-10-21 14:52:00.7115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 14:52:00.7115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 14:52:00.7188|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.3924ms
+2024-10-21 14:52:01.2994|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 587.9137ms
+2024-10-21 14:52:03.6680|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 14:52:03.7581|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 90.3795ms
+2024-10-21 14:52:04.8627|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 14:52:05.0180|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 156.0150ms
+2024-10-21 14:53:06.9131|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (206ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 14:53:07.7124|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (725ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 14:53:08.2339|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'OrderItem' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1c60736c-27db-497c-919c-fdb199a3f72a
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:53:51.2389|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__orderItem_OrderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[ProductId], [o].[ProductName], [o].[ProductPrice], [o].[Quantity]
+FROM [OrderItem] AS [o]
+WHERE [o].[OrderId] = @__orderItem_OrderId_0
+2024-10-21 14:53:51.9108|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 14:53:52.0458|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (134ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 14:53:52.4049|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'OrderItem' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1c60736c-27db-497c-919c-fdb199a3f72a
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 14:54:01.8163|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to database.
+2024-10-21 14:54:01.8345|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":92,"Name":"Sample Product","Price":150.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 14:54:01.8345|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=92, Name=Sample Product, Price=150.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 15:01:21.4839|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 15:01:22.1659|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 15:01:22.1659|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 15:01:22.1659|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 15:01:22.1659|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 15:01:22.1659|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 15:01:29.8424|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 15:01:33.1967|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3379.4781ms
+2024-10-21 15:01:33.5148|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 15:01:33.5148|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 15:01:33.5148|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.5981ms
+2024-10-21 15:01:33.5257|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 11.3147ms
+2024-10-21 15:01:34.3482|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 15:01:34.4173|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 69.4947ms
+2024-10-21 15:01:35.7101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 15:01:35.9083|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 200.2235ms
+2024-10-21 15:03:13.0272|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (99ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 15:03:13.2577|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (188ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 15:03:13.7014|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'Alphatech.Services.OrderAPI.Models.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'OrderItem' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:66c7e028-93fc-4c3c-91cd-804bf325898a
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-10-21 15:04:03.3596|ERROR|Alphatech.Services.OrderAPI.Repository.OrderRepository|An error occurred while creating the order.
+2024-10-21 15:13:48.4650|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-21 15:13:49.3731|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-21 15:13:49.3731|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-21 15:13:49.3731|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-21 15:13:49.3731|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-21 15:13:49.3731|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-21 15:13:52.6102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-21 15:13:54.9578|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2356.8466ms
+2024-10-21 15:13:55.1605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-21 15:13:55.1605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-21 15:13:55.1605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.3812ms
+2024-10-21 15:13:55.1747|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 14.1979ms
+2024-10-21 15:13:56.0179|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-21 15:13:56.1110|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 93.5938ms
+2024-10-21 15:13:56.5867|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-21 15:13:56.7579|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 171.6339ms
+2024-10-21 15:15:13.8999|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (137ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 15:15:13.9669|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+OUTPUT INSERTED.[OrderItemId]
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 15:15:23.5799|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to the database.
+2024-10-21 15:15:25.5983|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":92,"Name":"Sample Product","Price":150.99,"Description":"Test Product Description This is a sample product.","CategoryName":"Test Category","ImageURL":"www.product.com"}
+2024-10-21 15:15:26.4895|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=92, Name=Sample Product, Price=150.99, Description=Test Product Description This is a sample product., Category=Test Category, ImageURL=www.product.com
+2024-10-21 15:19:35.7045|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (72ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-21 15:19:35.7455|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 100), @p6='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p7='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [OrderItem] ([OrderId], [ProductId], [ProductName], [ProductPrice], [Quantity])
+OUTPUT INSERTED.[OrderItemId]
+VALUES (@p3, @p4, @p5, @p6, @p7);
+2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Order created and saved to the database.
+2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Processing 'order_created' message: {"Id":93,"Name":"Wood Product","Price":299.0,"Description":"Ensure OrderId is the primary key with identity (auto-increment).","CategoryName":"Establish a foreign key","ImageURL":"www.producOrderItem t.com"}
+2024-10-21 15:19:35.7455|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|Received Product: Id=93, Name=Wood Product, Price=299.0, Description=Ensure OrderId is the primary key with identity (auto-increment)., Category=Establish a foreign key, ImageURL=www.producOrderItem t.com

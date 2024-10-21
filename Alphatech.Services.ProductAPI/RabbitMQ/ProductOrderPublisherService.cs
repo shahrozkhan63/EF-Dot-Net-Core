@@ -8,13 +8,13 @@ using System.Threading.Channels;
 
 namespace Alphatech.Services.ProductAPI.RabbitMQ
 {
-    public class ProductService
+    public class ProductOrderPublisherService
     {
         private readonly IModel _channel;
         private readonly IConnection _connection;
         private readonly string validExchange = "product_exchange";
 
-        public ProductService(IOptions<RabbitMqSettings> rabbitMqSettings)
+        public ProductOrderPublisherService(IOptions<RabbitMqSettings> rabbitMqSettings)
         {
             // Create the connection factory using the provided settings
             var factory = new ConnectionFactory
@@ -44,7 +44,7 @@ namespace Alphatech.Services.ProductAPI.RabbitMQ
 
             // Attempt to publish a message
             _channel.BasicPublish(exchange: validExchange, // Use a valid exchange
-                                  routingKey: "product",      // Routing key
+                                  routingKey: "order_created",      // Routing key
                                   basicProperties: null,
                                   body: body,
                                   mandatory: true);            // Set mandatory to true

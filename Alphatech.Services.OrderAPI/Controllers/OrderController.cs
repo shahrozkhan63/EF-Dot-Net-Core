@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Alphatech.Services.OrderAPI.DBOrderContext;
+using Alphatech.Services.OrderAPI.Models;
 using Alphatech.Services.OrderAPI.Models.Dto;
 using Alphatech.Services.OrderAPI.Repository;
 using Alphatech.Services.OrderAPI.RabbitMQ;
-using Alphatech.Services.OrderAPI.Models;
 using Alphatech.Services.OrderAPI.OrderServices;
 
 namespace Alphatech.Services.OrderAPI.Controllers
@@ -21,11 +20,10 @@ namespace Alphatech.Services.OrderAPI.Controllers
         protected ResponseDto _response = new();
         private IOrderRepository _iOrderRepository;
         //private readonly OrderService _orderService;
-        private readonly GetProductOrderService _service;
-        public OrderController(IOrderRepository iOrderRepository, GetProductOrderService service)
+    
+        public OrderController(IOrderRepository iOrderRepository)
         {
             _iOrderRepository = iOrderRepository;
-            _service = service;
         }
 
         [Route("GetOrders")]
@@ -97,11 +95,9 @@ namespace Alphatech.Services.OrderAPI.Controllers
                 // Here you would typically save the order to a database
                 // For simplicity, we will just publish it to RabbitMQ
 
-                DeclareQueue("order_queue");
-                DeclareExchange("product_exchange", "direct");
-                BindQueueToExchange("order_queue", "product_exchange", "product");
+                
 
-                _service.StartConsuming();
+             
 
             }
             catch (Exception ex)

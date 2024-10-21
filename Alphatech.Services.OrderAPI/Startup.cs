@@ -1,7 +1,6 @@
-﻿using Alphatech.Services.OrderAPI.DBOrderContext;
+﻿using Alphatech.Services.OrderAPI.Models;
 using Alphatech.Services.OrderAPI.Models.Dto;
 using Alphatech.Services.OrderAPI.OrderServices;
-using Alphatech.Services.OrderAPI.RabbitMQ;
 using Alphatech.Services.OrderAPI.Repository;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -58,7 +57,7 @@ namespace Alphatech.Services.OrderAPI
             //services.AddSingleton<ProductConsumer>();
             //services.AddTransient<OrderService>();
            // services.AddTransient<GetProductOrderService>();
-            services.AddHostedService<RabbitMQConsumerService>();
+            services.AddHostedService<ProductOrderConsumerService>();
             // Add NLog as the logging provider
             services.AddLogging(loggingBuilder =>
             {

@@ -1,14 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Alphatech.Services.OrderAPI.Models
+namespace Alphatech.Services.OrderAPI.Models;
+
+public partial class Order
 {
-    public class Order
-    {
-        public int OrderId { get; set; }
-        public DateTime OrderDate { get; set; }
-        public string CustomerName { get; set; }
+    public int OrderId { get; set; }
 
-        // Navigation property for the many-to-many relationship
-        public ICollection<OrderItem> OrderItems { get; set; }
-    }
+    public string? OrderNumber { get; set; }
+
+    public DateTime OrderDate { get; set; }
+
+    public string CustomerName { get; set; } = null!;
+
+    public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

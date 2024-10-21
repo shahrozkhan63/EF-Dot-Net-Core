@@ -1,4 +1,5 @@
-﻿using Alphatech.Services.OrderAPI.Models.Dto;
+﻿using Alphatech.Services.OrderAPI.Models;
+using Alphatech.Services.OrderAPI.Models.Dto;
 
 namespace Alphatech.Services.OrderAPI.Repository
 {
@@ -7,10 +8,11 @@ namespace Alphatech.Services.OrderAPI.Repository
         Task<IEnumerable<OrderDto>> GetOrders();
         Task<IEnumerable<object>> GetDynamicOrders();
         Task<OrderDto> GetOrderById(int orderId);
-        Task<OrderDto> CreateUpdateOrder(OrderDto order);
-        Task<OrderDto> CreateOrder(OrderDto order);
+        Task<Order> CreateUpdateOrder(Order order);
+        Task<int> CreateOrder(Order order);
         Task<bool> DeleteOrder(int orderId);
         Task<int> TestConnectionAsync();
+        Task<int> CreateOrderItem(OrderItem order);
 
     }
 }
