@@ -1624,24 +1624,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Shahroz.SAIF-ZONE\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\APIGateway\\APIGateway.csproj",
+      "projectUniqueName": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\APIGateway\\APIGateway.csproj",
       "projectName": "APIGateway",
-      "projectPath": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\APIGateway\\APIGateway.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\APIGateway\\obj\\",
+      "projectPath": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\APIGateway\\APIGateway.csproj",
+      "packagesPath": "C:\\Users\\Shahroz.SAIF-ZONE\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\APIGateway\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Shahroz.SAIF-ZONE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1649,8 +1648,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net8.0": {

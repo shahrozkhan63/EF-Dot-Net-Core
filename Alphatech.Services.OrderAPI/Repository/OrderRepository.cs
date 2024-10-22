@@ -46,7 +46,6 @@ namespace Alphatech.Services.OrderAPI.Repository
                     _db.Orders.Add(order);
                 }
 
-                //var domain = await _db.Orders.Where(x => x.OrderId == order.OrderId).FirstOrDefaultAsync();
                 await _db.SaveChangesAsync();
 
             }
@@ -69,6 +68,26 @@ namespace Alphatech.Services.OrderAPI.Repository
                 }
                 _db.Orders.Remove(order);
                 await _db.SaveChangesAsync();
+
+                /*
+                #region Manual Deletion of Related OrderItem Entries
+                // Fetch the order including the related order items
+                order = _db.Orders
+                                    .Include(o => o.OrderItems)
+                                    .FirstOrDefault(o => o.OrderId == orderId);
+
+                if (order == null)
+                {
+                    return false; // Order not found
+                }
+
+                // Remove all related order items first
+                _db.OrderItems.RemoveRange(order.OrderItems);
+
+                // Remove the order itself
+                _db.Orders.Remove(order);
+                #endregion
+                */
                 return true;
             }
             catch (Exception ex)
@@ -82,7 +101,7 @@ namespace Alphatech.Services.OrderAPI.Repository
             OrderDto ordersDto = new();
             try
             {
-                var domain = await _db.Orders.Where(x => x.OrderId == orderId).FirstOrDefaultAsync();
+                var domain = await _db.Orders.Where(x => x.OrderId == orderId).Include(o => o.OrderItems).FirstOrDefaultAsync();
                 ordersDto = _mapper.Map<OrderDto>(domain);
             }
             catch (Exception ex)
@@ -97,7 +116,7 @@ namespace Alphatech.Services.OrderAPI.Repository
             List<OrderDto> ordersDto = new();
             try
             {
-                List<Order> domain = await _db.Orders.ToListAsync();
+                List<Order> domain = await _db.Orders.Include(o => o.OrderItems).ToListAsync();
                 ordersDto = _mapper.Map<List<OrderDto>>(domain);
             }
             catch (Exception ex)

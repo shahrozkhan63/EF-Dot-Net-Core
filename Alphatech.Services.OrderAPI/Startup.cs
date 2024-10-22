@@ -78,13 +78,15 @@ namespace Alphatech.Services.OrderAPI
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             //  services.AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new NullableTimeOnlyConverter()));
 
-            //services.AddControllers()
-            //   .AddJsonOptions(options =>
-            //   {
-            //       options.JsonSerializerOptions.Converters.Add(new NullableTimeOnlyConverter());
-            //   });
+            services.AddControllers()
+               .AddJsonOptions(options =>
+               {
+                   //options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+                   options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                   options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+               });
 
-            
+
             services.AddScoped<IOrderRepository, OrderRepository>();    
 
             services.AddHealthChecks();

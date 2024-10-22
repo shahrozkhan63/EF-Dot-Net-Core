@@ -15,11 +15,15 @@ namespace APIGateway
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot();
-            services.AddHttpClient(); // Register IHttpClientFactory to make API calls
-            services.AddHealthChecks(); // For health check endpoints
-            services.AddTransient<IOrderService, OrderService>();
 
+            services.AddHttpClient("OrderAPI", client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7049"); // This is the base address for Ocelot
+            });
+
+            services.AddHealthChecks(); // Health check endpoints
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddOcelot();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -32,6 +36,13 @@ namespace APIGateway
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context => {
+                    await context.Response.WriteAsync("E-Commerce Services - API Gateway");
+                });
+            });
 
             // Add Ocelot middleware after routing but before endpoints
             app.UseOcelot().Wait();

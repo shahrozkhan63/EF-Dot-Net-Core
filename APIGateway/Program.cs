@@ -13,6 +13,7 @@ public class Program
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
+                webBuilder.ConfigureAppConfiguration(x => x.AddJsonFile("ocelot.json"));
             });
     }
 }

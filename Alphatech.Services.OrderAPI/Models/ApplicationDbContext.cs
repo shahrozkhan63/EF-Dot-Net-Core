@@ -21,7 +21,7 @@ public partial class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-I18RC31\\SQLEXPRESS;Initial Catalog=OrderServiceDB;User ID=sa;Password=sql@123;MultipleActiveResultSets=True;TrustServerCertificate=Yes");
+        => optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=OrderServiceDB;User ID=sa;Password=mis@123;MultipleActiveResultSets=True;TrustServerCertificate=Yes");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -50,6 +50,12 @@ public partial class ApplicationDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__OrderItem__Order__173876EA");
         });
+
+        modelBuilder.Entity<Order>()
+                       .HasMany(o => o.OrderItems)
+                       .WithOne(oi => oi.Order)
+                       .HasForeignKey(oi => oi.OrderId)
+                       .OnDelete(DeleteBehavior.Cascade); // This enables cascade delete
 
         OnModelCreatingPartial(modelBuilder);
     }

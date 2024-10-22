@@ -3,11 +3,9 @@ namespace YourNamespace.Models.Dto
 {
     public class GeneratedOrderDTO
     {
-        public Int32 Id { get; set; }
-        public String Name { get; set; }
-        public Decimal Price { get; set; }
-        public String Description { get; set; }
-        public String CategoryName { get; set; }
-        public String ImageURL { get; set; }
+        public Int32 OrderId { get; set; }
+        public String OrderNumber { get; set; }
+        public DateTime OrderDate { get; set; }
+        public String CustomerName { get; set; }
     }
 }

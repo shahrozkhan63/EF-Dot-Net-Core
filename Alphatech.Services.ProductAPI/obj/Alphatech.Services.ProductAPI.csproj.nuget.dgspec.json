@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj": {}
+    "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj": {
+    "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj",
         "projectName": "Alphatech.Services.ProductAPI",
-        "projectPath": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\Projects\\EF Dot Net Core Alpha - Microservices\\Alphatech.Services.ProductAPI\\obj\\",
+        "projectPath": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\Alphatech.Services.ProductAPI\\Alphatech.Services.ProductAPI.csproj",
+        "packagesPath": "C:\\Users\\Shahroz.SAIF-ZONE\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\TestWeb\\AlphaTech\\AlphaTech\\Alphatech.Services.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Shahroz.SAIF-ZONE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {

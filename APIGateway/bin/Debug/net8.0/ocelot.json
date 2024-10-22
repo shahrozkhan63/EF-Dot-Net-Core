@@ -9,11 +9,11 @@
           "Port": 7131
         }
       ],
-      "UpstreamPathTemplate": "/Order/GetOrders",
+      "UpstreamPathTemplate": "/order/getorders",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+      "DownstreamPathTemplate": "/api/Order/GetOrderById/{orderId}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -21,7 +21,43 @@
           "Port": 7131
         }
       ],
-      "UpstreamPathTemplate": "/swagger/v1/swagger.json",
+      "UpstreamPathTemplate": "/order/getorderbyid/{orderId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/CreateUpdateOrder",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "UpstreamPathTemplate": "/order/createupdateorder",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/DeleteOrder/{orderId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "UpstreamPathTemplate": "/order/deleteorder/{orderId}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/TestConnection",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "UpstreamPathTemplate": "/order/testconnection",
       "UpstreamHttpMethod": [ "GET" ]
     }
   ],

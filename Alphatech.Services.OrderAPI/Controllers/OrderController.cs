@@ -61,7 +61,7 @@ namespace Alphatech.Services.OrderAPI.Controllers
         }
 
         [Route("GetOrderById/{orderId:int}")]
-        [HttpPut]
+        [HttpGet]
         public async Task<object> GetOrderById(int orderId)
         {
             try
@@ -79,26 +79,21 @@ namespace Alphatech.Services.OrderAPI.Controllers
 
         [Route("CreateUpdateOrder")]
         [HttpPost]
-        public async Task<object> CreateUpdateOrder(OrderDto orderDto)
+        public async Task<object> CreateUpdateOrder(Order order)
         {
             try
             {
-                if (orderDto == null)
+                if (order == null)
                 {
                     return BadRequest("Order cannot be null");
                 }
 
-                //var returnModel = await _iOrderRepository.CreateUpdateOrder(orderDto);
-                //_response.Result = returnModel;
+                var returnModel = await _iOrderRepository.CreateUpdateOrder(order);
+                _response.Result = returnModel;
 
 
                 // Here you would typically save the order to a database
                 // For simplicity, we will just publish it to RabbitMQ
-
-                
-
-             
-
             }
             catch (Exception ex)
             {
@@ -106,7 +101,7 @@ namespace Alphatech.Services.OrderAPI.Controllers
                 _response.ErrorMessages = new List<string> { ex.ToString() };
             }
             //  return _response;
-            return CreatedAtAction(nameof(CreateUpdateOrder), new { ResponseMessage = "Order service is now consuming messages." }, orderDto);
+            return CreatedAtAction(nameof(CreateUpdateOrder), new { ResponseMessage = "Order service is now consuming messages." }, order);
         }
 
         [Route("DeleteOrder")]
