@@ -1935,3 +1935,1048 @@ ORDER BY [o1].[OrderId]
 2024-10-22 15:05:41.4565|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 3505.1529ms
 2024-10-22 15:05:41.4565|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
 2024-10-22 15:05:41.4565|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - 200 - application/json;+charset=utf-8 3506.7684ms
+2024-10-23 13:23:19.6991|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 13:23:21.6165|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 13:23:21.6238|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 13:23:21.6238|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 13:23:21.6238|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 13:23:21.6238|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 13:23:23.6964|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 13:23:25.9685|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:23:26.0507|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:26.0696|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:23:26.7624|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3075.9271ms
+2024-10-23 13:23:26.8268|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 13:23:26.8268|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 13:23:26.8268|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 10.2087ms
+2024-10-23 13:23:26.8443|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 17.5107ms
+2024-10-23 13:23:27.3281|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 13:23:27.4676|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 139.5915ms
+2024-10-23 13:23:27.9183|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 13:23:28.0651|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 146.8155ms
+2024-10-23 13:23:29.0031|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (58ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:23:29.1471|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:23:29.2145|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 3139.8477ms
+2024-10-23 13:23:29.2151|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:29.2151|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 3255.3131ms
+2024-10-23 13:23:38.3885|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - - -
+2024-10-23 13:23:38.3885|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:38.3885|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:23:38.5017|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (26ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:23:38.5017|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:23:38.5017|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 108.0586ms
+2024-10-23 13:23:38.5017|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:38.5017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - 200 - application/json;+charset=utf-8 120.7418ms
+2024-10-23 13:23:41.7914|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:23:41.7914|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:41.7914|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:23:41.8534|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:23:41.8559|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:23:41.8559|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 64.2253ms
+2024-10-23 13:23:41.8559|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:41.8559|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 65.3964ms
+2024-10-23 13:23:44.7293|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - - -
+2024-10-23 13:23:44.7293|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:44.7293|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:23:44.7429|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:23:44.7429|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:23:44.7469|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 16.1624ms
+2024-10-23 13:23:44.7469|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:23:44.7469|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - 200 - application/json;+charset=utf-8 18.4422ms
+2024-10-23 13:24:23.8924|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - application/json;+charset=utf-8 -
+2024-10-23 13:24:23.8924|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:24:23.8924|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateUpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] CreateUpdateOrder(Alphatech.Services.OrderAPI.Models.Order) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:24:49.6973|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Order] SET [CustomerName] = @p0, [OrderDate] = @p1, [OrderNumber] = @p2
+OUTPUT 1
+WHERE [OrderId] = @p3;
+2024-10-23 13:24:56.2803|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Order'.
+2024-10-23 13:24:56.2961|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI) in 32398.5454ms
+2024-10-23 13:24:56.2961|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:24:56.2961|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - 201 - application/json;+charset=utf-8 32403.9320ms
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:24:56.3343|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 5.1358ms
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:24:56.3343|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 5.9816ms
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/3 - - -
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:17.8428|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 7.4045ms
+2024-10-23 13:25:17.8428|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:17.8565|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/3 - 200 - application/json;+charset=utf-8 13.6969ms
+2024-10-23 13:25:33.6465|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - application/json;+charset=utf-8 -
+2024-10-23 13:25:33.6465|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:33.6465|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateUpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] CreateUpdateOrder(Alphatech.Services.OrderAPI.Models.Order) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:37.2545|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Order] SET [CustomerName] = @p0, [OrderDate] = @p1, [OrderNumber] = @p2
+OUTPUT 1
+WHERE [OrderId] = @p3;
+2024-10-23 13:25:37.2545|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Order'.
+2024-10-23 13:25:37.2545|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI) in 3609.0093ms
+2024-10-23 13:25:37.2545|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:37.2545|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - 201 - application/json;+charset=utf-8 3609.7643ms
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:37.2975|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 8.9731ms
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:37.2975|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 10.4367ms
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/4 - - -
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:40.6534|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 4.1991ms
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:40.6534|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/4 - 200 - application/json;+charset=utf-8 5.2181ms
+2024-10-23 13:25:51.6364|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - application/json;+charset=utf-8 -
+2024-10-23 13:25:51.6364|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:51.6364|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateUpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] CreateUpdateOrder(Alphatech.Services.OrderAPI.Models.Order) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:51.6472|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Order] SET [CustomerName] = @p0, [OrderDate] = @p1, [OrderNumber] = @p2
+OUTPUT 1
+WHERE [OrderId] = @p3;
+2024-10-23 13:25:51.6472|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Order'.
+2024-10-23 13:25:51.6472|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI) in 10.463ms
+2024-10-23 13:25:51.6472|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:51.6472|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - 201 - application/json;+charset=utf-8 12.2652ms
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:51.7049|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 4.1486ms
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:51.7049|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 4.7733ms
+2024-10-23 13:25:53.4949|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/5 - - -
+2024-10-23 13:25:53.4949|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:53.4949|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:25:53.5022|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:25:53.5022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:25:53.5022|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 7.479ms
+2024-10-23 13:25:53.5022|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:25:53.5022|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/5 - 200 - application/json;+charset=utf-8 8.5173ms
+2024-10-23 13:26:03.3815|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - application/json;+charset=utf-8 -
+2024-10-23 13:26:03.3815|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:03.3815|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateUpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] CreateUpdateOrder(Alphatech.Services.OrderAPI.Models.Order) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:03.3928|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Order] SET [CustomerName] = @p0, [OrderDate] = @p1, [OrderNumber] = @p2
+OUTPUT 1
+WHERE [OrderId] = @p3;
+2024-10-23 13:26:03.3928|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Order'.
+2024-10-23 13:26:03.3928|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI) in 12.0959ms
+2024-10-23 13:26:03.3928|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:03.3928|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - 201 - application/json;+charset=utf-8 15.6096ms
+2024-10-23 13:26:03.4316|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:26:03.4316|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:03.4316|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:03.4371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:26:03.4371|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:26:03.4371|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6.8483ms
+2024-10-23 13:26:03.4371|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:03.4371|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 8.5768ms
+2024-10-23 13:26:07.2777|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:26:07.2777|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:07.2777|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:07.2843|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:26:07.2843|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:26:07.2843|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 7.3128ms
+2024-10-23 13:26:07.2843|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:07.2843|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 7.9339ms
+2024-10-23 13:26:43.6688|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/1010 - - -
+2024-10-23 13:26:43.6714|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:43.6714|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:43.6933|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:26:43.6933|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:26:43.6933|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 22.5968ms
+2024-10-23 13:26:43.6933|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:43.6933|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/1010 - 200 - application/json;+charset=utf-8 26.9585ms
+2024-10-23 13:26:52.8711|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:7131/api/Order/DeleteOrder/1010 - - -
+2024-10-23 13:26:52.8721|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:7131/api/Order/DeleteOrder/1010 - 404 0 - 1.0289ms
+2024-10-23 13:26:52.8721|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: DELETE https://localhost:7131/api/Order/DeleteOrder/1010, Response status code: 404
+2024-10-23 13:26:52.8967|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:26:52.8967|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:52.8967|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:52.9038|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:26:52.9038|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:26:52.9038|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6.9621ms
+2024-10-23 13:26:52.9038|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:52.9038|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 9.8210ms
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:26:59.7691|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 4.4265ms
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:26:59.7691|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 5.1500ms
+2024-10-23 13:32:04.0978|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 13:32:05.0812|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 13:32:05.0812|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 13:32:05.0812|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 13:32:05.0812|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 13:32:05.0812|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 13:32:06.1109|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 13:32:07.3301|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:32:07.4312|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:07.4577|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:32:08.7793|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2675.5351ms
+2024-10-23 13:32:08.7999|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 13:32:08.7999|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 13:32:08.8177|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 7.9329ms
+2024-10-23 13:32:08.8177|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 20.7903ms
+2024-10-23 13:32:09.2024|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 13:32:09.2659|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 65.4229ms
+2024-10-23 13:32:09.5502|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:32:09.7792|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:32:09.7801|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 13:32:09.8559|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2393.5483ms
+2024-10-23 13:32:09.8559|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:09.8683|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2541.0563ms
+2024-10-23 13:32:09.9218|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 141.7319ms
+2024-10-23 13:32:16.2027|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/1010 - - -
+2024-10-23 13:32:16.2027|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:16.2027|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:32:16.3019|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 13:32:16.3019|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:32:16.3019|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 93.9004ms
+2024-10-23 13:32:16.3019|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:16.3019|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/1010 - 200 - application/json;+charset=utf-8 106.5028ms
+2024-10-23 13:32:17.7194|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:7131/api/Order/DeleteOrder/1010 - - -
+2024-10-23 13:32:17.7194|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.DeleteOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:17.7194|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DeleteOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] DeleteOrder(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:32:25.0533|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (27ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+FROM [Order] AS [o]
+WHERE [o].[OrderId] = @__orderId_0
+2024-10-23 13:32:26.7370|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Order]
+OUTPUT 1
+WHERE [OrderId] = @p0;
+2024-10-23 13:32:31.6141|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:32:31.6141|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.DeleteOrder (Alphatech.Services.OrderAPI) in 13897.4206ms
+2024-10-23 13:32:31.6141|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.DeleteOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:31.6141|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:7131/api/Order/DeleteOrder/1010 - 200 - application/json;+charset=utf-8 13901.6525ms
+2024-10-23 13:32:31.6518|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:32:31.6518|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:31.6518|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:32:31.6605|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:32:31.6605|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:32:31.6605|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 11.3762ms
+2024-10-23 13:32:31.6605|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:32:31.6605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 12.2798ms
+2024-10-23 13:54:00.4161|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 13:54:02.2394|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 13:54:02.2394|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 13:54:02.2394|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 13:54:02.2394|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 13:54:02.2394|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 13:54:03.1689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 13:54:04.6534|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:54:04.7659|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:54:04.8097|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:54:06.0537|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2931.2050ms
+2024-10-23 13:54:06.0537|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 13:54:06.0537|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 6.3596ms
+2024-10-23 13:54:06.0805|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 13:54:06.1013|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 32.9820ms
+2024-10-23 13:54:06.3894|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 13:54:06.5279|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 138.5705ms
+2024-10-23 13:54:06.9690|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 13:54:07.1595|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 190.5362ms
+2024-10-23 13:54:07.2872|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:54:07.4491|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:54:07.5599|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2739.2405ms
+2024-10-23 13:54:07.5677|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:54:07.5856|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2934.4113ms
+2024-10-23 13:54:17.7268|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:54:17.7268|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:54:17.7268|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:54:17.7605|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:54:17.7605|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:54:17.7605|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 27.0746ms
+2024-10-23 13:54:17.7605|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:54:17.7605|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 38.5686ms
+2024-10-23 13:55:07.5499|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:07.5499|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:07.5499|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:07.6103|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:07.6103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:07.6103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 62.0088ms
+2024-10-23 13:55:07.6103|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:07.6103|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 63.4376ms
+2024-10-23 13:55:11.1920|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:11.1924|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 7.5379ms
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:11.1924|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 9.3259ms
+2024-10-23 13:55:19.2948|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:19.2948|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:19.2948|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:19.3069|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:19.3069|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:19.3069|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 14.1089ms
+2024-10-23 13:55:19.3069|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:19.3069|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 14.9295ms
+2024-10-23 13:55:25.9083|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 13:55:26.1626|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:26.1626|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:26.1626|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:26.1626|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:26.1626|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:26.1776|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 8.4003ms
+2024-10-23 13:55:26.1776|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:26.1776|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 15.6514ms
+2024-10-23 13:55:27.9696|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2062.5919ms
+2024-10-23 13:55:28.1586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 13:55:28.1586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.1089ms
+2024-10-23 13:55:28.7712|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 13:55:28.7712|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 13:55:28.7712|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 1.6541ms
+2024-10-23 13:55:28.7907|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 18.3630ms
+2024-10-23 13:55:29.3580|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 13:55:29.3580|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 4.5788ms
+2024-10-23 13:55:30.9984|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:30.9984|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:30.9984|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:30.9984|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:31.0058|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:31.0058|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 5.798ms
+2024-10-23 13:55:31.0058|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:31.0058|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 8.4808ms
+2024-10-23 13:55:58.6985|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:55:58.6985|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:58.6985|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:55:58.7127|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:55:58.7127|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:55:58.7127|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6.9887ms
+2024-10-23 13:55:58.7127|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:55:58.7127|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 16.0575ms
+2024-10-23 13:58:06.6781|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 13:58:06.6784|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6.529ms
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 13:58:06.6784|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 7.4736ms
+2024-10-23 14:05:08.3488|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:05:10.3981|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:05:10.3981|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:05:10.3981|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:05:10.3981|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:05:10.3981|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:05:11.3104|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:05:13.5435|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:05:14.0723|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:05:14.1184|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:05:14.3124|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3011.7967ms
+2024-10-23 14:05:14.3488|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:05:14.3488|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:05:14.3510|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 2.2309ms
+2024-10-23 14:05:14.3708|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 22.6397ms
+2024-10-23 14:05:14.8973|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:05:15.0844|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 187.4819ms
+2024-10-23 14:05:15.5494|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:05:16.0538|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 509.8357ms
+2024-10-23 14:05:17.7685|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:06:05.5608|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:06:05.6303|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 51506.5688ms
+2024-10-23 14:06:05.6303|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:06:05.6380|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 52095.5703ms
+2024-10-23 14:06:31.7649|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:06:31.7649|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:06:31.7649|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:06:31.8162|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:06:37.8847|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:06:37.8847|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6117.6875ms
+2024-10-23 14:06:37.8847|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:06:37.8847|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 6121.5041ms
+2024-10-23 14:07:01.5587|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:07:01.5587|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:07:01.5587|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:07:01.6249|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:07:14.8323|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:07:14.8323|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 13273.4783ms
+2024-10-23 14:07:14.8323|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:07:14.8323|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 13274.7440ms
+2024-10-23 14:07:54.2490|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:07:54.2490|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:07:54.2490|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:07:54.2580|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:07:56.2845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:07:56.2845|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2032.067ms
+2024-10-23 14:07:56.2845|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:07:56.2899|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2042.1575ms
+2024-10-23 14:09:22.7163|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:09:25.2549|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2538.6897ms
+2024-10-23 14:09:25.3586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:09:25.3586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:09:25.3586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 1.5016ms
+2024-10-23 14:09:25.3586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 2.1635ms
+2024-10-23 14:09:25.6488|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:09:25.6488|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:09:25.6488|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:09:25.6488|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:09:29.5292|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:10:08.9915|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:10:09.0114|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 43358.0177ms
+2024-10-23 14:10:09.0114|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:10:09.0114|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 43363.0043ms
+2024-10-23 14:10:09.0114|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 39487.5839ms
+2024-10-23 14:10:20.8326|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:10:20.8396|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 7.2410ms
+2024-10-23 14:10:55.4817|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:10:57.5411|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2061.2405ms
+2024-10-23 14:10:57.5768|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:10:57.5768|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:10:57.5768|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:10:57.5994|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:10:59.6255|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:10:59.6255|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:10:59.6255|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.7423ms
+2024-10-23 14:10:59.6255|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:11:09.0539|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:11:09.0550|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 9430.0454ms
+2024-10-23 14:11:09.0550|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 11484.4106ms
+2024-10-23 14:11:09.0550|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:11:09.0550|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 11489.9460ms
+2024-10-23 14:11:09.1295|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 9502.2386ms
+2024-10-23 14:11:14.6091|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:11:14.6091|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 3.6444ms
+2024-10-23 14:11:17.0453|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:11:17.0453|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:11:17.0453|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:11:17.0453|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:11:25.2590|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:11:25.2590|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 8212.3075ms
+2024-10-23 14:11:25.2590|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:11:25.2590|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 8214.3550ms
+2024-10-23 14:12:03.8563|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:12:05.5361|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:12:05.5423|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:12:05.5423|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:12:05.5423|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:12:05.5423|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:12:06.8238|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:12:08.0445|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:12:08.0974|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:12:08.1191|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:12:09.4545|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2656.0088ms
+2024-10-23 14:12:09.5007|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:12:09.5102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:12:09.5102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 20.0728ms
+2024-10-23 14:12:09.5102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 11.1260ms
+2024-10-23 14:12:09.8404|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:12:09.9880|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 147.7132ms
+2024-10-23 14:12:10.3533|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:12:10.4468|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:12:20.1379|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:12:20.1580|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 9711.1777ms
+2024-10-23 14:12:20.2151|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 12090.4267ms
+2024-10-23 14:12:20.2151|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:12:20.2276|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 12184.2033ms
+2024-10-23 14:14:05.5512|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:14:05.5512|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:14:05.5512|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:14:05.6072|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:14:08.6264|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:14:08.6264|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 3073.5024ms
+2024-10-23 14:14:08.6264|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:14:08.6264|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 3076.6224ms
+2024-10-23 14:15:14.1369|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:15:16.0782|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:15:16.0782|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:15:16.0782|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:15:16.1490|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:15:16.1510|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:15:16.1510|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 73.2413ms
+2024-10-23 14:15:16.1510|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:15:16.1510|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 79.5944ms
+2024-10-23 14:15:30.1197|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 15982.6548ms
+2024-10-23 14:15:30.3908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:15:30.3908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:15:30.3908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 3.3708ms
+2024-10-23 14:15:30.3908|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 4.9273ms
+2024-10-23 14:15:31.5510|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:15:31.6482|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 97.0187ms
+2024-10-23 14:15:32.6142|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:15:32.6209|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 6.7614ms
+2024-10-23 14:15:46.8787|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:15:49.0449|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:15:49.2355|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:15:49.2355|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:15:49.2355|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:15:49.2355|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:15:49.7385|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:15:51.9054|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:15:51.9713|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:15:51.9977|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:15:52.3880|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2658.3560ms
+2024-10-23 14:15:52.4274|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:15:52.4274|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:15:52.4274|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.9578ms
+2024-10-23 14:15:52.4589|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 31.3672ms
+2024-10-23 14:15:52.7895|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:15:52.9382|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 149.7103ms
+2024-10-23 14:15:53.3371|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:15:53.4630|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 125.9247ms
+2024-10-23 14:15:54.4979|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:15:54.6645|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:15:54.7428|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2738.9926ms
+2024-10-23 14:15:54.7428|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:15:54.7511|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2846.9098ms
+2024-10-23 14:23:33.2425|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:23:34.2450|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:23:34.2491|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:23:34.2491|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:23:34.2491|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:23:34.2491|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:23:35.5518|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:23:37.8306|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:23:37.8772|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:23:37.8967|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:23:38.3439|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2808.1647ms
+2024-10-23 14:23:38.3952|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:23:38.4115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:23:38.4115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.7684ms
+2024-10-23 14:23:38.4115|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 23.1332ms
+2024-10-23 14:23:38.8463|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:23:39.3550|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 507.9275ms
+2024-10-23 14:23:40.0299|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:23:41.1538|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 1127.7518ms
+2024-10-23 14:23:42.6750|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (718ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:23:42.9221|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:23:42.9984|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 5096.8162ms
+2024-10-23 14:23:42.9984|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:23:42.9984|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 5176.7334ms
+2024-10-23 14:23:52.6094|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:23:52.6094|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:23:52.6094|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:23:52.6330|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:23:52.6330|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:23:52.6330|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 25.4033ms
+2024-10-23 14:23:52.6330|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:23:52.6330|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 27.7485ms
+2024-10-23 14:25:46.7879|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:25:46.7879|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:25:46.7879|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:25:46.8932|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:25:46.8932|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:25:46.8932|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 107.064ms
+2024-10-23 14:25:46.8932|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:25:46.8932|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 108.0773ms
+2024-10-23 14:26:26.0820|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:26:28.3105|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:26:28.3145|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:26:28.3145|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:26:28.3145|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:26:28.3145|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:26:30.0786|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:26:31.2456|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:26:31.3000|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:26:31.3238|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:26:32.9952|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2924.2324ms
+2024-10-23 14:26:33.7938|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:26:34.0412|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:26:34.1219|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2793.1936ms
+2024-10-23 14:26:34.1219|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:26:34.1351|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2890.3322ms
+2024-10-23 14:26:34.1407|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:26:34.1407|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 2.3224ms
+2024-10-23 14:26:36.8167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:26:36.8167|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:26:36.8294|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 13.4210ms
+2024-10-23 14:26:36.8649|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 48.1874ms
+2024-10-23 14:26:38.0597|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:26:38.1689|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 109.4621ms
+2024-10-23 14:27:04.0884|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:27:04.7195|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:27:04.7195|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:27:04.7385|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:27:04.7385|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:27:04.7385|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:27:05.8740|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:27:08.9575|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3092.5958ms
+2024-10-23 14:27:09.1473|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:27:09.1473|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:27:09.1473|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 2.2449ms
+2024-10-23 14:27:09.1849|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 37.6249ms
+2024-10-23 14:27:09.5434|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:27:09.7678|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:27:09.8380|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:09.8472|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 302.5747ms
+2024-10-23 14:27:09.8609|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:27:10.3708|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:27:10.5585|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 187.7837ms
+2024-10-23 14:27:12.0770|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:27:12.2316|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:27:12.3097|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2443.1178ms
+2024-10-23 14:27:12.3097|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:12.3186|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2551.9314ms
+2024-10-23 14:27:15.0230|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:27:15.0230|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:15.0230|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:27:15.0544|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:27:15.0544|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:27:15.0544|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 32.4818ms
+2024-10-23 14:27:15.0544|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:15.0544|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 35.3707ms
+2024-10-23 14:27:32.2379|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:27:32.2379|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:32.2379|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:27:32.3173|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:27:32.3173|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:27:32.3173|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 83.0887ms
+2024-10-23 14:27:32.3173|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:32.3173|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 84.1519ms
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:27:45.4270|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 5.9016ms
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:45.4270|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 6.9975ms
+2024-10-23 14:27:47.0148|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:27:47.0148|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:47.0148|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:27:47.0215|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:27:47.0215|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:27:47.0215|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 9.6892ms
+2024-10-23 14:27:47.0215|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:27:47.0215|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 10.5509ms
+2024-10-23 14:28:04.0322|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 14:28:05.3830|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 14:28:05.3914|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 14:28:05.3914|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 14:28:05.3914|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 14:28:05.3914|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 14:28:06.5767|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 14:28:08.1170|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:28:08.2075|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:08.2303|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:28:09.1299|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2576.1383ms
+2024-10-23 14:28:09.1773|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 14:28:09.1773|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 14:28:09.2003|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 22.9694ms
+2024-10-23 14:28:09.2101|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 32.9077ms
+2024-10-23 14:28:09.6381|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 14:28:09.7008|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 66.5283ms
+2024-10-23 14:28:10.4057|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 14:28:10.6215|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 215.8172ms
+2024-10-23 14:28:10.7592|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:28:10.9164|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:28:11.0028|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2764.8092ms
+2024-10-23 14:28:11.0028|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:11.0239|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2907.9894ms
+2024-10-23 14:28:13.7164|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:28:13.7197|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:13.7197|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:28:13.7481|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:28:13.7505|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:28:13.7505|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 29.8256ms
+2024-10-23 14:28:13.7505|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:13.7505|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 35.9186ms
+2024-10-23 14:28:50.8795|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - - -
+2024-10-23 14:28:50.8795|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:50.8795|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrderById(Int32) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:28:51.0309|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (27ms) [Parameters=[@__orderId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o1].[OrderId], [o1].[CustomerName], [o1].[OrderDate], [o1].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber]
+    FROM [Order] AS [o]
+    WHERE [o].[OrderId] = @__orderId_0
+) AS [o1]
+LEFT JOIN [OrderItem] AS [o0] ON [o1].[OrderId] = [o0].[OrderId]
+ORDER BY [o1].[OrderId]
+2024-10-23 14:28:51.0389|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:28:51.0389|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI) in 149.2056ms
+2024-10-23 14:28:51.0389|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrderById (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:51.0389|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrderById/2 - 200 - application/json;+charset=utf-8 160.2831ms
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:28:52.7429|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 6.3532ms
+2024-10-23 14:28:52.7429|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:52.7507|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 7.9262ms
+2024-10-23 14:28:54.2957|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:28:54.2957|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:54.2957|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:28:54.3108|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:28:54.3224|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:28:54.3224|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 29.5349ms
+2024-10-23 14:28:54.3224|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:28:54.3224|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 32.3221ms
+2024-10-23 14:29:20.2486|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - application/json;+charset=utf-8 -
+2024-10-23 14:29:20.2486|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:20.2531|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateUpdateOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] CreateUpdateOrder(Alphatech.Services.OrderAPI.Models.Order) on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:29:20.4084|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime), @p2='?' (Size = 50) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Order] ([CustomerName], [OrderDate], [OrderNumber])
+OUTPUT INSERTED.[OrderId]
+VALUES (@p0, @p1, @p2);
+2024-10-23 14:29:20.4362|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedAtActionResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Order'.
+2024-10-23 14:29:20.4514|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI) in 198.1656ms
+2024-10-23 14:29:20.4514|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.CreateUpdateOrder (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:20.4514|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7131/api/Order/CreateUpdateOrder - 201 - application/json;+charset=utf-8 203.1290ms
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:29:20.4753|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 5.368ms
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:20.4753|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 6.2609ms
+2024-10-23 14:29:26.6795|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:29:26.6795|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:26.6795|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:29:26.6979|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:29:26.6979|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:29:26.6979|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 17.0429ms
+2024-10-23 14:29:26.6979|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:26.6979|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 20.4965ms
+2024-10-23 14:29:30.8682|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 14:29:30.8682|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:30.8682|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 14:29:30.8777|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 14:29:30.8777|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 14:29:30.8777|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 10.0384ms
+2024-10-23 14:29:30.8777|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 14:29:30.8777|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 11.5907ms
+2024-10-23 15:01:17.7444|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 15:01:19.0544|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 15:01:19.0544|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 15:01:19.0544|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 15:01:19.0544|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 15:01:19.0544|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 15:01:20.5007|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 15:01:23.5744|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 3081.5851ms
+2024-10-23 15:01:23.6934|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 15:01:23.7415|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:01:23.7786|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 15:01:24.1586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 15:01:24.1586|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.9776ms
+2024-10-23 15:01:25.7983|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 15:01:25.9499|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 15:01:26.0057|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 15:01:26.0057|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 15:01:26.0760|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2292.7336ms
+2024-10-23 15:01:26.0760|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:01:26.1066|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2414.5330ms
+2024-10-23 15:01:26.1066|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 103.1156ms
+2024-10-23 15:01:26.1711|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 163.7060ms
+2024-10-23 15:01:29.2435|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 15:01:29.3869|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 144.1278ms
+2024-10-23 15:03:58.4570|INFO|Alphatech.Services.OrderAPI.OrderServices.ProductOrderConsumerService|RabbitMQ consumer initialized. Listening on queue 'order_queue' bound to exchange 'product_exchange'.
+2024-10-23 15:03:59.1829|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7131
+2024-10-23 15:03:59.1829|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5007
+2024-10-23 15:03:59.1829|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2024-10-23 15:03:59.1829|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2024-10-23 15:03:59.1829|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Projects\TestWeb\AlphaTech\AlphaTech\Alphatech.Services.OrderAPI
+2024-10-23 15:04:00.9906|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - - -
+2024-10-23 15:04:03.8873|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - 200 - text/html;charset=utf-8 2926.1240ms
+2024-10-23 15:04:03.9619|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - -
+2024-10-23 15:04:03.9619|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/index.js - - -
+2024-10-23 15:04:03.9619|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/index.js - 200 - application/javascript;charset=utf-8 1.8436ms
+2024-10-23 15:04:03.9808|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - 200 13789 application/javascript;+charset=utf-8 18.8900ms
+2024-10-23 15:04:04.3123|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - - -
+2024-10-23 15:04:04.3925|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 81.5152ms
+2024-10-23 15:04:04.8271|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 15:04:04.8789|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:04:04.8837|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - -
+2024-10-23 15:04:04.9053|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 15:04:05.0749|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 191.1800ms
+2024-10-23 15:04:07.0536|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 15:04:07.2599|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 15:04:07.3432|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 2432.5708ms
+2024-10-23 15:04:07.3432|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:04:07.3552|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 2531.6150ms
+2024-10-23 15:06:09.3064|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - - -
+2024-10-23 15:06:09.3064|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:06:09.3064|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetOrders() on controller Alphatech.Services.OrderAPI.Controllers.OrderController (Alphatech.Services.OrderAPI).
+2024-10-23 15:06:09.3443|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [o].[OrderId], [o].[CustomerName], [o].[OrderDate], [o].[OrderNumber], [o0].[OrderItemId], [o0].[OrderId], [o0].[ProductId], [o0].[ProductName], [o0].[ProductPrice], [o0].[Quantity]
+FROM [Order] AS [o]
+LEFT JOIN [OrderItem] AS [o0] ON [o].[OrderId] = [o0].[OrderId]
+ORDER BY [o].[OrderId]
+2024-10-23 15:06:09.3489|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Alphatech.Services.OrderAPI.Models.Dto.ResponseDto'.
+2024-10-23 15:06:09.3489|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI) in 40.6766ms
+2024-10-23 15:06:09.3489|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Alphatech.Services.OrderAPI.Controllers.OrderController.GetOrders (Alphatech.Services.OrderAPI)'
+2024-10-23 15:06:09.3489|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7131/api/Order/GetOrders - 200 - application/json;+charset=utf-8 43.7340ms

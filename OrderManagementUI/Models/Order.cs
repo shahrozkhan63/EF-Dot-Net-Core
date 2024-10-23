@@ -12,7 +12,7 @@ namespace OrderManagementUI.Models
 
         public string CustomerName { get; set; } = null!;
 
-        [JsonIgnore] // Avoid serializing the Order reference to prevent the cycle
+        //[JsonIgnore] // Avoid serializing the Order reference to prevent the cycle
         public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

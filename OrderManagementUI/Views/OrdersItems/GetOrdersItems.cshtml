@@ -1,0 +1,60 @@
+﻿@model IEnumerable<OrderManagementUI.ViewModels.OrderViewModel>
+
+@{
+    ViewData["Title"] = "GetOrdersItems";
+}
+
+<h1>GetOrdersItems</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order Number</th>
+            <th>Customer Name</th>
+            <th>Order Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orderViewModel in Model)
+        {
+            <tr>
+                <td>@orderViewModel.Order.OrderNumber</td>
+                <td>@orderViewModel.Order.CustomerName</td>
+                <td>@orderViewModel.Order.OrderDate.ToShortDateString()</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = orderViewModel.Order.OrderId }) |
+                    @Html.ActionLink("Details", "Details", new { id = orderViewModel.Order.OrderId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = orderViewModel.Order.OrderId })
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in orderViewModel.OrderItems)
+                            {
+                                <tr>
+                                    <td>@item.ProductName</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.ProductPrice?.ToString("C")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

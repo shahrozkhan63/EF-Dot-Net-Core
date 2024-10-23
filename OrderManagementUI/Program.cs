@@ -32,9 +32,8 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Order}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default",pattern: "{controller=Order}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=OrdersItems}/{action=GetOrdersItems}/{id?}");
 });
 
 

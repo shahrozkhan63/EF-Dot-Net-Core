@@ -1,0 +1,102 @@
+﻿@model OrderManagementUI.ViewModels.OrderViewModel
+
+@{
+    ViewData["Title"] = "CreateOrdersItems";
+}
+
+<h1>CreateOrdersItems</h1>
+
+<h4>OrderViewModel</h4>
+<hr />
+<form asp-action="CreateOrdersItems" method="post">
+
+    <div class="form-group">
+        <label asp-for="Order.OrderNumber" class="control-label"></label>
+        <input asp-for="Order.OrderNumber" class="form-control" />
+        <span asp-validation-for="Order.OrderNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Order.OrderDate" class="control-label"></label>
+        <input asp-for="Order.OrderDate" class="form-control" type="date" />
+        <span asp-validation-for="Order.OrderDate" class="text-danger"></span>
+    </div>
+
+    <h3>Order Items</h3>
+
+    <table class="table" id="orderItemsTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.OrderItems != null && Model.OrderItems.Any())
+            {
+                for (int i = 0; i < Model.OrderItems.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <input asp-for="OrderItems[@i].ProductName" class="form-control" />
+                            <span asp-validation-for="OrderItems[@i].ProductName" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="OrderItems[@i].Quantity" class="form-control" type="number" />
+                            <span asp-validation-for="OrderItems[@i].Quantity" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="OrderItems[@i].ProductPrice" class="form-control" type="number" step="0.01" />
+                            <span asp-validation-for="OrderItems[@i].ProductPrice" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary" id="addItemButton">Add Order Item</button>
+
+    <div class="form-group mt-3">
+        <input type="submit" value="CreateOrdersItems" class="btn btn-success" />
+    </div>
+
+</form>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var itemIndex = @Model.OrderItems?.Count ?? 0;
+
+        // Add a new row for an OrderItem
+        $('#addItemButton').on('click', function () {
+            var newRow = `
+            <tr>
+                <td>
+                    <input name="OrderItems[` + itemIndex + `].ProductName" class="form-control" />
+                </td>
+                <td>
+                    <input name="OrderItems[` + itemIndex + `].Quantity" class="form-control" type="number" />
+                </td>
+                <td>
+                    <input name="OrderItems[` + itemIndex + `].Price" class="form-control" type="number" step="0.01" />
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button>
+                </td>
+            </tr>`;
+            $('#orderItemsTable tbody').append(newRow);
+            itemIndex++;
+        });
+
+        // Remove a row
+        function removeItem(button) {
+            $(button).closest('tr').remove();
+        }
+    </script>
+}

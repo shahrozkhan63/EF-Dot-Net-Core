@@ -16,7 +16,7 @@ namespace OrderManagementUI.Models
 
         public decimal? ProductPrice { get; set; }
 
-        [JsonIgnore] // Avoid serializing the Order reference to prevent the cycle
+        //[JsonIgnore] // Avoid serializing the Order reference to prevent the cycle
         public virtual Order Order { get; set; } = null!;
     }
 

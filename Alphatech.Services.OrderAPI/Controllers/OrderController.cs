@@ -104,7 +104,7 @@ namespace Alphatech.Services.OrderAPI.Controllers
             return CreatedAtAction(nameof(CreateUpdateOrder), new { ResponseMessage = "Order service is now consuming messages." }, order);
         }
 
-        [Route("DeleteOrder")]
+        [Route("DeleteOrder/{orderId:int}")]
         [HttpDelete]
         public async Task<object> DeleteOrder(int orderId)
         {

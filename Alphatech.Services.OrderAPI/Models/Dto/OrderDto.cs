@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Alphatech.Services.OrderAPI.Models.Dto
 {
@@ -9,7 +10,7 @@ namespace Alphatech.Services.OrderAPI.Models.Dto
         public string? OrderNumber { get; set; }
         public string CustomerName { get; set; }
 
-        // Navigation property for the many-to-many relationship
+        //[JsonIgnore]
         public ICollection<OrderItem> OrderItems { get; set; }
     }
 }

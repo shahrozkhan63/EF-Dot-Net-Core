@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Alphatech.Services.OrderAPI.Models;
 
@@ -13,5 +14,6 @@ public partial class Order
 
     public string CustomerName { get; set; } = null!;
 
+    //[JsonIgnore]
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 }

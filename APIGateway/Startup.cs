@@ -1,5 +1,4 @@
-﻿using APIGateway.Services.OrderService;
-using Ocelot.DependencyInjection;
+﻿using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
 namespace APIGateway
@@ -22,7 +21,6 @@ namespace APIGateway
             });
 
             services.AddHealthChecks(); // Health check endpoints
-            services.AddTransient<IOrderService, OrderService>();
             services.AddOcelot();
         }
 
