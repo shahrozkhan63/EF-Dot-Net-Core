@@ -1,28 +1,153 @@
 ﻿@model OrderManagementUI.ViewModels.OrderViewModel
 
 @{
-    ViewData["Title"] = "EditOrdersItems";
+    ViewData["Title"] = "Edit Order";
+
+    // Display TempData messages for user feedback
+    if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    if (TempData["WarningMessage"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            @TempData["WarningMessage"]
+        </div>
+    }
+
+    if (TempData["InfoMessage"] != null)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @TempData["InfoMessage"]
+        </div>
+    }
 }
 
-<h1>EditOrdersItems</h1>
+<h2>Edit Order</h2>
 
-<h4>OrderViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="EditOrdersItems">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<form method="post" action="/OrdersItems/EditOrdersItems">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Order.OrderId">Order ID</label>
+        <input asp-for="Order.OrderId" class="form-control" readonly />
     </div>
-</div>
+    <div class="form-group">
+        <label asp-for="Order.OrderNumber" class="control-label"></label>
+        <input asp-for="Order.OrderNumber" class="form-control" />
+        <span asp-validation-for="Order.OrderNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Order.CustomerName">Customer Name</label>
+        <input asp-for="Order.CustomerName" class="form-control" />
+        <span asp-validation-for="Order.CustomerName" class="text-danger"></span>
+    </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="form-group">
+        <label asp-for="Order.OrderDate">Order Date</label>
+        <input asp-for="Order.OrderDate" class="form-control" />
+        <span asp-validation-for="Order.OrderDate" class="text-danger"></span>
+    </div>
+
+    <hr />
+
+    <h3>Order Items</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="orderItemsTable">
+            @if (Model.Order.OrderItems != null && Model.Order.OrderItems.Any())
+            {
+                var orderItemsList = Model.Order.OrderItems.ToList(); // Convert to List
+                for (var i = 0; i < orderItemsList.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <!-- Hidden field for OrderItemId to ensure it's submitted -->
+                            <input type="hidden" name="Order.OrderItems[@i].OrderItemId" value="@orderItemsList[i].OrderItemId" />
+                            <input asp-for="Order.OrderItems[@i].ProductId" class="form-control" />
+                            <span asp-validation-for="Order.OrderItems[@i].ProductId" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Order.OrderItems[@i].ProductName" class="form-control" />
+                            <span asp-validation-for="Order.OrderItems[@i].ProductName" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Order.OrderItems[@i].Quantity" class="form-control" />
+                            <span asp-validation-for="Order.OrderItems[@i].Quantity" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Order.OrderItems[@i].ProductPrice" class="form-control" />
+                            <span asp-validation-for="Order.OrderItems[@i].ProductPrice" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4">No items added to this order yet.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary" onclick="addItem()">Add New Item</button>
+
+    <hr />
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        let orderItemIndex = @Model.Order.OrderItems.Count; // Start index for order items
+
+        function addItem() {
+            var orderItemsTable = document.getElementById('orderItemsTable');
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                    <td>
+                                    <input name="Order.OrderItems[${orderItemIndex}].ProductId" class="form-control" />
+                                </td>
+                        <td>
+                            <input name="Order.OrderItems[${orderItemIndex}].ProductName" class="form-control" />
+                        </td>
+                        <td>
+                            <input type="number" name="Order.OrderItems[${orderItemIndex}].Quantity" class="form-control" />
+                        </td>
+                        <td>
+                            <input type="number" name="Order.OrderItems[${orderItemIndex}].ProductPrice" class="form-control" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="removeItem(this)">Remove</button>
+                        </td>`;
+            orderItemsTable.appendChild(newRow);
+            orderItemIndex++;
+        }
+
+        function removeItem(button) {
+            var row = button.closest('tr');
+            row.parentNode.removeChild(row);
+        }
+    </script>
 }

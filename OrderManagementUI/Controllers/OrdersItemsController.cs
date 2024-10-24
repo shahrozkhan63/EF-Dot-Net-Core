@@ -14,34 +14,16 @@ namespace OrderManagementUI.Controllers
         public OrdersItemsController(IOrderService orderService)
         {
             _orderService = orderService;
-            OrderViewModel = new OrderViewModel { Order = new Order(), OrderItems = new List<OrderItem>() };
+            OrderViewModel = new OrderViewModel { Order = new Order() };
         }
 
         public async Task<IActionResult> GetOrdersItems()
         {
             // Fetch the list of orders from the service
-            var orders = await _orderService.GetOrdersAsync();
-
-            // Initialize an empty list for OrderViewModels
-            List<OrderViewModel> orderViewModels = new();
-
-            foreach (var order in orders)
-            {
-                // Create a new OrderViewModel for each order
-                OrderViewModel orderViewModel = new()
-                {
-                    Order = order,
-
-                    // Convert the ICollection<OrderItem> to List<OrderItem> safely
-                    OrderItems = order.OrderItems?.ToList() ?? new List<OrderItem>()
-                };
-
-                // Add the mapped view model to the list
-                orderViewModels.Add(orderViewModel);
-            }
+            var ordersViewModel = await _orderService.GetOrdersAsync();
 
             // Pass the list of OrderViewModels to the view
-            return View(orderViewModels);
+            return View(ordersViewModel);
         }
 
 
@@ -53,25 +35,39 @@ namespace OrderManagementUI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrdersItems(OrderViewModel orderViewModel)
         {
-            Order order = new();
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                order.OrderNumber = orderViewModel.Order.OrderNumber;
-                order.OrderDate = orderViewModel.Order.OrderDate;
-                order.CustomerName = orderViewModel.Order.CustomerName;
-              
+                var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                  .Select(e => e.ErrorMessage)
+                                  .ToList();
 
-                foreach (var orderItem in orderViewModel.OrderItems)
-                {
-                    order.OrderItems.Add(orderItem);
-                }
-
-                await _orderService.CreateOrderAsync(order);
-               
+                ViewBag.Errors = errors;
+                TempData["ErrorMessage"] = "Validation failed. Please check the input";
+                return View(orderViewModel); // Return the view with the model containing validation errors.
             }
 
-            return RedirectToAction(nameof(GetOrdersItems));
+            try
+            {
+                bool response = await _orderService.CreateOrderAsync(orderViewModel); // Call the service
+
+                if (response)
+                {
+                    TempData["SuccessMessage"] = "Order created successfully!";
+                    return RedirectToAction(nameof(GetOrdersItems)); // Redirect after successful creation
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "failed to add order";
+                    return View(orderViewModel); // Return the view with the model containing validation errors.
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message + " | An error occurred while creating the order.";
+                return RedirectToAction("Create");
+            }
         }
+
 
         public async Task<IActionResult> EditOrdersItems(int id)
         {
@@ -82,25 +78,39 @@ namespace OrderManagementUI.Controllers
         [HttpPost]
         public async Task<IActionResult> EditOrdersItems(OrderViewModel orderViewModel)
         {
-            Order order = new();
-            if (ModelState.IsValid)
+
+            try
             {
-                order.OrderId = orderViewModel.Order.OrderId;
-                order.OrderNumber = orderViewModel.Order.OrderNumber;
-                order.OrderDate = orderViewModel.Order.OrderDate;
-                order.CustomerName = orderViewModel.Order.CustomerName;
-
-
-                foreach (var orderItem in orderViewModel.OrderItems)
+                if (!ModelState.IsValid)
                 {
-                    order.OrderItems.Add(orderItem);
+                    var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                      .Select(e => e.ErrorMessage)
+                                      .ToList();
+
+                    ViewBag.Errors = errors;
+                    TempData["ErrorMessage"] = "Validation failed. Please check the input";
+                    return View(orderViewModel); // Return the view with the model containing validation errors.
                 }
 
-                await _orderService.CreateOrderAsync(order);
 
+                bool response = await _orderService.CreateOrderAsync(orderViewModel); // Call the service
+
+                if (response)
+                {
+                    TempData["SuccessMessage"] = "Order updated successfully!";
+                    return RedirectToAction(nameof(GetOrdersItems)); // Redirect after successful creation
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "failed to update order";
+                    return View(orderViewModel); // Return the view with the model containing validation errors.
+                }
             }
-
-            return RedirectToAction(nameof(GetOrdersItems));
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message + " | An error occurred while creating the order.";
+                return RedirectToAction("Create");
+            }
         }
 
         public async Task<IActionResult> DeleteOrdersItems(int id)
