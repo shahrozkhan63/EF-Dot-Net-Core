@@ -10,6 +10,7 @@ using Alphatech.Services.OrderAPI.Models.Dto;
 using Alphatech.Services.OrderAPI.Repository;
 using Alphatech.Services.OrderAPI.RabbitMQ;
 using Alphatech.Services.OrderAPI.OrderServices;
+using Alphatech.Services.OrderAPI.ViewModels;
 
 namespace Alphatech.Services.OrderAPI.Controllers
 {
@@ -19,11 +20,13 @@ namespace Alphatech.Services.OrderAPI.Controllers
     {
         protected ResponseDto _response = new();
         private IOrderRepository _iOrderRepository;
+        public Order OrderEntity { get; set; }
         //private readonly OrderService _orderService;
-    
+
         public OrderController(IOrderRepository iOrderRepository)
         {
             _iOrderRepository = iOrderRepository;
+            OrderEntity = new Order();
         }
 
         [Route("GetOrders")]
@@ -32,16 +35,25 @@ namespace Alphatech.Services.OrderAPI.Controllers
         {
             try
             {
-                IEnumerable<OrderDto> returnModel = await _iOrderRepository.GetOrders();
-                _response.Result = returnModel;
+                // Fetch orders from repository
+                var returnModel = await _iOrderRepository.GetOrders();
+
+                // Use LINQ to project OrderDto to OrderViewModel directly
+                var orderList = returnModel?.Select(item => new OrderViewModel
+                {
+                    Order = item
+                }).ToList() ?? new List<OrderViewModel>();
+
+                _response.Result = orderList;
             }
             catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string> { ex.ToString() };  
+                _response.ErrorMessages = new List<string> { ex.ToString() };
             }
             return _response;
         }
+
 
         [Route("GetDynamicOrders")]
         [HttpGet]
@@ -67,7 +79,13 @@ namespace Alphatech.Services.OrderAPI.Controllers
             try
             {
                 var returnModel = await _iOrderRepository.GetOrderById(orderId);
-                _response.Result = returnModel;
+
+
+                OrderViewModel OrderModel = new OrderViewModel();
+                OrderModel.Order = returnModel;
+
+
+                _response.Result = OrderModel;
             }
             catch (Exception ex)
             {
@@ -79,16 +97,36 @@ namespace Alphatech.Services.OrderAPI.Controllers
 
         [Route("CreateUpdateOrder")]
         [HttpPost]
-        public async Task<object> CreateUpdateOrder(Order order)
+        public async Task<object> CreateUpdateOrder([FromBody]  OrderViewModel orderViewModel)
         {
             try
             {
-                if (order == null)
+                if (orderViewModel == null)
                 {
                     return BadRequest("Order cannot be null");
                 }
 
-                var returnModel = await _iOrderRepository.CreateUpdateOrder(order);
+                OrderEntity = new Order
+                {
+                    OrderId = orderViewModel.Order.OrderId,
+                    OrderNumber = orderViewModel.Order.OrderNumber,
+                    OrderDate = orderViewModel.Order.OrderDate,
+                    CustomerName = orderViewModel.Order.CustomerName,
+                    OrderItems = orderViewModel.Order.OrderItems.Select(oi => new OrderItem
+                    {
+                        OrderItemId = oi.OrderItemId,
+                        OrderId = orderViewModel.Order.OrderId,
+                        ProductId = oi.ProductId,
+                        ProductName = oi.ProductName,
+                        ProductPrice = oi.ProductPrice,
+                        Quantity = oi.Quantity,
+                        // Don't set Order here since it's optional
+                    }).ToList()
+                };
+
+
+
+                var returnModel = await _iOrderRepository.CreateUpdateOrder(OrderEntity);
                 _response.Result = returnModel;
 
 
@@ -101,7 +139,7 @@ namespace Alphatech.Services.OrderAPI.Controllers
                 _response.ErrorMessages = new List<string> { ex.ToString() };
             }
             //  return _response;
-            return CreatedAtAction(nameof(CreateUpdateOrder), new { ResponseMessage = "Order service is now consuming messages." }, order);
+            return CreatedAtAction(nameof(CreateUpdateOrder), new { ResponseMessage = "Order service is now consuming messages." }, OrderEntity);
         }
 
         [Route("DeleteOrder/{orderId:int}")]

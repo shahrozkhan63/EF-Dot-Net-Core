@@ -5,6 +5,6 @@ namespace OrderManagementUI.ViewModels
     public class OrderViewModel
     {
         public Order Order { get; set; }
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        //public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

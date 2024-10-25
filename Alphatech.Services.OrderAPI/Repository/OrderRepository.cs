@@ -34,27 +34,62 @@ namespace Alphatech.Services.OrderAPI.Repository
             {
                 if (order == null)
                 {
-                    order = new Order();
+                    throw new ArgumentNullException(nameof(order));
                 }
 
                 if (order.OrderId > 0)
                 {
-                    _db.Update<Order>(order);
+                    // Get the existing order from the database to attach its current state
+                    var existingOrder = await _db.Orders
+                        .Include(o => o.OrderItems) // Include OrderItems to track existing items
+                        .FirstOrDefaultAsync(o => o.OrderId == order.OrderId);
+
+                    if (existingOrder != null)
+                    {
+                        // Update existing order properties
+                        existingOrder.OrderNumber = order.OrderNumber;
+                        existingOrder.OrderDate = order.OrderDate;
+                        existingOrder.CustomerName = order.CustomerName;
+
+                        // Update order items
+                        foreach (var item in order.OrderItems)
+                        {
+                            // Check if this item already exists
+                            var existingItem = existingOrder.OrderItems
+                                .FirstOrDefault(oi => oi.OrderItemId == item.OrderItemId);
+
+                            if (existingItem != null)
+                            {
+                                // Update existing item
+                                existingItem.ProductId = item.ProductId;
+                                existingItem.ProductName = item.ProductName;
+                                existingItem.Quantity = item.Quantity;
+                                existingItem.ProductPrice = item.ProductPrice;
+                            }
+                            else
+                            {
+                                // Add new item
+                                existingOrder.OrderItems.Add(item);
+                            }
+                        }
+                    }
                 }
                 else
                 {
+                    // Add new order if no OrderId
                     _db.Orders.Add(order);
                 }
 
                 await _db.SaveChangesAsync();
-
             }
             catch (Exception ex)
             {
-
+                // Handle exceptions (logging, rethrowing, etc.)
+                throw; // You may want to log this exception instead
             }
             return order;
         }
+
 
         public async Task<bool> DeleteOrder(int orderId)
         {

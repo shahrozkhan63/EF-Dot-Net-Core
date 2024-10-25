@@ -26,14 +26,14 @@ namespace OrderManagementUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Order order)
+        public async Task<IActionResult> Create(OrderViewModel orderViewModel)
         {
             if (ModelState.IsValid)
             {
-                await _orderService.CreateOrderAsync(order);
+                await _orderService.CreateOrderAsync(orderViewModel);
                 return RedirectToAction(nameof(Index));
             }
-            return View(order);
+            return View(orderViewModel);
         }
 
         public async Task<IActionResult> Edit(int id)
@@ -43,14 +43,14 @@ namespace OrderManagementUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Order order)
+        public async Task<IActionResult> Edit(OrderViewModel orderViewModel)
         {
             if (ModelState.IsValid)
             {
-                await _orderService.UpdateOrderAsync(order);
+                await _orderService.UpdateOrderAsync(orderViewModel);
                 return RedirectToAction(nameof(Index));
             }
-            return View(order);
+            return View(orderViewModel);
         }
 
         public async Task<IActionResult> Delete(int id)

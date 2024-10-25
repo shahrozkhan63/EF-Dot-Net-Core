@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OrderManagementUI.Models.Order>
+﻿@model IEnumerable<OrderManagementUI.ViewModels.OrderViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,42 +15,44 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OrderId)
+                @Html.DisplayNameFor(model => model.Order.OrderId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OrderNumber)
+                @Html.DisplayNameFor(model => model.Order.OrderNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OrderDate)
+                @Html.DisplayNameFor(model => model.Order.OrderDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CustomerName)
+                @Html.DisplayNameFor(model => model.Order.CustomerName)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDate, "{0:yyyy-MM-dd}", new { type = "date" })
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName)
-            </td>
-            <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+        @if (Model != null){
+            foreach (var item in Model) {
+                <tr>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Order.OrderId)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Order.OrderNumber)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Order.OrderDate, "{0:yyyy-MM-dd}", new { type = "date" })
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.Order.CustomerName)
+                    </td>
+                    <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Order.OrderId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Order.OrderId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Order.OrderId })
                   
-            </td>
-        </tr>
-}
+                    </td>
+                </tr>
+            }
+        }
     </tbody>
 </table>

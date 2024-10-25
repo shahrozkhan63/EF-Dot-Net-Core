@@ -14,7 +14,7 @@ namespace OrderManagementUI.Services
             _clientFactory = clientFactory;
         }
 
-        public async Task<IEnumerable<Order>> GetOrdersAsync()
+        public async Task<IEnumerable<OrderViewModel>> GetOrdersAsync()
         {
             var options = new JsonSerializerOptions
             {
@@ -28,8 +28,8 @@ namespace OrderManagementUI.Services
             var response = await client.GetAsync("/order/getorders"); // API Gateway route
             response.EnsureSuccessStatusCode();
 
-            var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<IEnumerable<Order>>>(options);
-            return apiResponse?.Result ?? new List<Order>();
+            var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<IEnumerable<OrderViewModel>>>(options);
+            return apiResponse?.Result ?? new List<OrderViewModel>();
         }
 
         public async Task<IEnumerable<OrderViewModel>> GetOrdersItemsAsync()
@@ -52,7 +52,7 @@ namespace OrderManagementUI.Services
 
 
 
-        public async Task<Order?> GetOrderByIdAsync(int orderId)
+        public async Task<OrderViewModel?> GetOrderByIdAsync(int orderId)
         {
             var options = new JsonSerializerOptions
             {
@@ -66,12 +66,12 @@ namespace OrderManagementUI.Services
             var response = await client.GetAsync($"/order/getorderbyid/{orderId}"); // API Gateway route
             response.EnsureSuccessStatusCode();
 
-            var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<Order>>(options);
+            var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse<OrderViewModel>>(options);
             return apiResponse?.Result;
         }
 
 
-        public async Task<bool> CreateOrderAsync(Order order)
+        public async Task<bool> CreateOrderAsync(OrderViewModel orderViewModel)
         {
             var options = new JsonSerializerOptions
             {
@@ -79,15 +79,19 @@ namespace OrderManagementUI.Services
                 PropertyNameCaseInsensitive = true // To handle camelCase from API.
             };
 
+            var orderJson = JsonSerializer.Serialize(orderViewModel, options);
+            Console.WriteLine(orderJson); // Log to console or use a logging framework
+
+
             var client = _clientFactory.CreateClient("OrderAPI");
 
             // Call the API Gateway route
-            var response = await client.PostAsJsonAsync("/order/createupdateorder", order, options); // API Gateway route
+            var response = await client.PostAsJsonAsync("/order/createupdateorder", orderViewModel, options); // API Gateway route
             return response.IsSuccessStatusCode;
         }
 
 
-        public async Task<bool> UpdateOrderAsync(Order order)
+        public async Task<bool> UpdateOrderAsync(OrderViewModel orderViewModel)
         {
             var options = new JsonSerializerOptions
             {
@@ -98,7 +102,7 @@ namespace OrderManagementUI.Services
             var client = _clientFactory.CreateClient("OrderAPI");
 
             // Call the API Gateway route
-            var response = await client.PostAsJsonAsync("/order/createupdateorder", order, options); // API Gateway route
+            var response = await client.PostAsJsonAsync("/order/createupdateorder", orderViewModel, options); // API Gateway route
             return response.IsSuccessStatusCode;
         }
 

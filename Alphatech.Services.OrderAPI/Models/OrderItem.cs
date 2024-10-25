@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Alphatech.Services.OrderAPI.Models;
 
@@ -18,6 +17,5 @@ public partial class OrderItem
 
     public decimal? ProductPrice { get; set; }
 
-    //[JsonIgnore]
     public virtual Order Order { get; set; } = null!;
 }
