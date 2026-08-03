@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Alphatech.Services.ProductAPI.props" />
-</Project>

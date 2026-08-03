@@ -1,5 +1,40 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+# .NET / Visual Studio
 ################################################################################
 
-/.vs
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio cache/options
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## Rider / VS Code
+.idea/
+*.sln.iml
+.vscode/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## EF Core
+*.edmx.diagram
+
+## Node (for any wwwroot/lib tooling)
+node_modules/
